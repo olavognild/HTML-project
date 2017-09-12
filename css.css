@@ -3,7 +3,7 @@ body, html{
     height: 100%;
     padding: 0;
     margin: 0;
-    background-color: beige;
+    background-color: rebeccapurple;
 }
 
 #meny{
@@ -12,6 +12,7 @@ body, html{
     display: flex;
     align-items: center;
     text-align: center;
+    position: fixed;
 }
 
 ul{
@@ -21,11 +22,20 @@ ul{
 }
 
 li{
-        display: inline;
-        background-color: white;
-        opacity: 0.5;
-        color: black;
-        font-weight: bold;
-        padding: 2%;
-        font-size: 2 em;
+    display: inline;
+    background-color: white;
+    opacity: 0.5;
+    color: black;
+    font-weight: bold;
+    padding: 2%;
+    font-size: 2 em;
+}
+
+.bgimg1{
+    background-image: url("img/paraImg1.png");
+    min-height: 100%;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
