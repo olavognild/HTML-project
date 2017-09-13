@@ -48,7 +48,32 @@
         </h2>        
                 
 
+<!--
+    //Javascript
+var images=["img1.png","img2.jpg","img3.jpg"];
+var imageNumber =0;
+var imageLength = images.length -1;
 
+function changeImage(x){
+    imageNumber += x;
+
+    if(imageNumber > imageLength){
+        imageNumber =0;
+    }
+    document.getElementById("slideshow").src = images[imageNumber];
+    
+}
+
+
+// HTML-koden
+<div id="pics">
+    <img id="slideshow" class="img-circle" src="img1.png">
+
+    <button type="button" onclick="changeImage(1)"> 
+        Visa Bild</button>
+
+</div>
+-->
     </div>
     <script src="js.js"></script>
 </body>
