@@ -9,8 +9,21 @@
     <link rel="stylesheet" href="css.css">
     <!-- font -->
     <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
     <!-- javascript -->
     <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script src="jquery-1.10.2.min.js"></script>
+
+
+    <script>
+        $(document).ready(function () {
+            $("#link1").click(function () {
+                $path = $("#Box1").offset().top;
+
+                $('body').animate({ scrollTop: $path }, 1000);
+            })
+        })
+    </script>
 </head>
 
 <body>
@@ -29,7 +42,14 @@
     </nav>
 
     <!-- första bakgrunden -->
-    <div class="bgimg1" id="home"></div>
+    <div class="bgimg1" id="home">
+        <p class="welcomeTxt">WELCOME</p>
+    </div>
+    <br>
+
+    <a href="#Box1" id="link1">BOX1</a>
+
+    <br>
 
 
     <div id="paragrafer">
@@ -57,7 +77,7 @@
     </div>
 
     <!-- Anda bakgrunden -->
-    <div class="bgimg2" id="home"></div>
+    <div class="bgimg2" id="Box1"></div>
 
     <div class="person">
         <div id="personSlide1">
@@ -93,7 +113,8 @@
                 den första riktiga Lorem Ipsum-generatorn på internet. Den använder ett ordförråd på över 200 ord, kombinerat
                 med ett antal meningsbyggnadsstrukturer som tillsamman genererar Lorem Ipsum som ser ut som en normal mening.
                 Lorem Ipsum genererad på denna sidan är därför alltid fri från repetitioner, humorinslag, märkliga ordformationer
-                osv.</p>
+                osv.
+            </p>
             <input type="image" id="nästaKnapp" src="img/arrowright.png" onclick="bytSlide()" />
             <div class="progressBars">
                 <p align="center">Mina kunskaper</p>
