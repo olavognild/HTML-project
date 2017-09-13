@@ -1,8 +1,8 @@
 $(document).scroll(function(){
     if($(document).scrollTop() > 150) {
-        $("nav").addClass("scroll");
+        $("nav, .plogo").addClass("scroll");
     }
     else {
-        $("nav").removeClass("scroll");
+        $("nav, .plogo").removeClass("scroll");
     }
 });

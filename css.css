@@ -6,6 +6,7 @@ body, html{
     background-color: rebeccapurple;
 }
 
+/* Navbar med meny */
 .meny{
     width: 100%;   
     height: 20%;
@@ -14,6 +15,7 @@ body, html{
     text-align: center;
     position: fixed;
     background: transparent;
+    transition: all .4s;
 }
 
 ul{
@@ -23,18 +25,42 @@ ul{
 }
 
 li{
+    font-family: 'Lobster', Georgia, Times, serif;
     display: inline;
-    background-color: white;
-    border-radius: 5px;
-    opacity: 0.5;
     color: black;
     font-weight: bold;
     padding: 2%;
-    font-size: 2 em;
+    font-size: 2em;
+}
+div.logodiv{
+    padding: 10%;
 }
 
+.plogo{
+    font-family: 'Lobster', Georgia, Times, serif;
+    font-weight: bold;
+    font-size: 3em;
+    transition: all .4s;
+}
+
+ /* scrollfunktionen */
+.scroll{
+    height: 10%;
+    width: 100%;
+    padding-top: 0;
+    font-size: 1em;
+    background-color: rgba(39, 38, 38, 0.50);
+    transition: all .4s;
+}
+
+.scroll.plogo{
+    background: transparent;
+    font-size: 1.7em;
+    transition: all .4s;
+}
+
+/* bakgrundsbilder */
 .bgimg1, .bgimg2{
- 
     min-height: 100%;
     background-attachment: fixed;
     background-position: center;
@@ -50,8 +76,3 @@ li{
     background-image: url("img/paraImg2.jpg")
 }
 
-.scroll{
-
-    padding-top: 0;
-    background-color: rgba(39, 38, 38, 0.50);
-}
