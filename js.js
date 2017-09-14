@@ -17,3 +17,11 @@ function bytSlide() {
     slide2.style.display = (
         slide2.style.display == "none" ? "block" : "none"); 
  }
+
+ $(document).ready(function () {
+    $("#link1").click(function () {
+        $path = $("#Box1").offset().top;
+        event.preventDefault();
+        $('body').animate({ scrollTop: $path }, 1000);
+    })
+})
