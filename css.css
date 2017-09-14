@@ -17,6 +17,7 @@ body, html{
     position: fixed;
     background: transparent;
     transition: all .4s;
+    z-index: 2;
 }
 
 
@@ -32,7 +33,7 @@ li{
     color: black;
     font-weight: bold;
     padding: 2%;
-    font-size: 2em;
+    font-size: 3.5vw;
 }
 
 /* Hover i menyn*/
@@ -51,12 +52,13 @@ a {
 
 div.logodiv{
     padding: 10%;
+    width: 30%;
 }
 
 .plogo{
     font-family: 'Lobster', Georgia, Times, serif;
     font-weight: bold;
-    font-size: 3em;
+    font-size: 4.5vw    ;
     transition: all .4s;
 }
 
@@ -109,6 +111,7 @@ div.logodiv{
     background-color: black;
     border-radius: 10px;
     font-family: "Lato", sans-serif;
+    z-index: 1;
 }
 
 /*Parallax 2*/
@@ -123,51 +126,84 @@ div.logodiv{
     min-height: 70%;
 }
 
-#paragrafer{
+/*BÖR VI KANSKE TITTA PÅ DENNA?*/
+#omGrupp{
     padding: 2%;
     font-family: 'Scope One', serif;
 }
 
+/*Persondiv*/
 .person {
     width: 100%;
-    height: 100;
+    height: 70%;
+    position: relative;
 }
 
-#nästaKnapp {
-    height: 50%;
-    width: 15%;
-    float: right;
-}
-
-.personText {
-    padding-left: 25%;
-    text-align: center;
-    width: 50%;
-}
-
-.progressBars {
-    width: 15%;
+/*Bilddiv*/
+.bild {
     padding: 2%;
+    float: left;
 }
 
-progress
-{
-  text-align: center;
-  height: 1.5em;
-  width: 200px;
+/*Textdiv i personSlide*/
+.personText {
+    padding-left: 5%;
+    width: 45%;
+    text-align: center;
+    float: left;
 }
 
+/*Progressbar*/
+.progressBars {
+    padding-left: 5%;
+    float: left;
+    vertical-align: top;
+}
+
+/*Style för progressbar*/
+progress {
+    text-align: center;
+    height: 1.5em;
+    width: 200px;
+    font-weight: bold;
+  }
+
+/*Innehållet i baren*/
 progress:before {
   content: attr(data-label);
   font-size: 0.8em;
   vertical-align: 0;
 }
 
-#timmy {
-    padding: 2%;
-    width: 20%;
+/*Den fina texten ovanför progressbars*/
+.kunskap {
+    font-weight: bold;
+    font-size: 1.5em;
+    text-decoration: underline;
 }
 
+/*Knapparna för att byta slides*/
+#left, #right {
+    position: absolute;
+    cursor: pointer;
+    color: white;
+    font-weight: bold;
+    font-size: 50px;
+    position: absolute;
+    bottom: 0;
+}
+
+/*Den vänstra knappens position*/
+#left {
+    padding-left: 33%;
+    left: 0;
+}
+
+/* Den högra knappens position*/
+#right {
+    padding-right: 33%;
+    right: 0;
+}
 
 .contactHead{
     text-align: center;

@@ -40,7 +40,7 @@
     <div class="anchorPoint" id="anchor1"></div>
 
     <!-- Utfyllnad av text -->
-    <div id="paragrafer">
+    <div class="omGrupp">
         <h2>Lorem Ipsum är en utfyllnadstext från tryck- och förlagsindustrin. <br> Lorem ipsum har varit standard ända sedan
             1500-talet, när en <br> okänd boksättare tog att antal bokstäver och blandade dem för <br> att göra ett provexemplar
             av en bok. Lorem ipsum har inte bara överlevt <br> fem århundraden, utan även övergången till elektronisk typografi
@@ -64,29 +64,31 @@
 
     </div>
 
-    <!-- Anda bakgrunden -->
+    <!-- Andra bakgrunden -->
     <div class="bgimg2" id="anchor2"></div>
 
     <!-- AnchorPoint för personsidorna -->
     <div class="anchorPoint" id="anchor3"></div>
-
+    <!-- Div som innehåller informationen om oss -->
     <div class="person">
-        <div id="personSlide1">
-            <img src="img/timmy.jpg" alt="bild på Timmy" id="timmy" align="left">
-            <h1 class="personText">Hallå där!</h1>
-            <p class="personText">
-                Det finns många olika varianter av Lorem Ipsum, men majoriteten av dessa har ändrats på någotvis. Antingen med inslag av
-                humor, eller med inlägg av ord som knappast ser trovärdiga ut. Skall man använda långa stycken av Lorem Ipsum
-                bör man försäkra sig om att det inte gömmer sig något pinsamt mitt i texten. Lorem Ipsum-generatorer på internet
-                tenderar att repetera Lorem Ipsum-texten styckvis efter behov, något som gör denna sidan till den första
-                riktiga Lorem Ipsum-generatorn på internet. Den använder ett ordförråd på över 200 ord, kombinerat med ett
-                antal meningsbyggnadsstrukturer som tillsamman genererar Lorem Ipsum som ser ut som en normal mening. Lorem
-                Ipsum genererad på denna sidan är därför alltid fri från repetitioner, humorinslag, märkliga ordformationer
-                osv.
-            </p>
-            <input type="image" id="nästaKnapp" src="img/arrowright.png" onclick="bytSlide()" />
+        <div id="personSlide1"> 
+            <div class="bild">
+                <img src="img/timmy.jpg" alt="bild på Timmy" id="timmy" align="left">
+            </div>
+            <div class="personText">
+                <h1>Hallå där!</h1>
+                <p> Det finns många olika varianter av Lorem Ipsum, men majoriteten av dessa har ändrats på någotvis. Antingen
+                    med inslag av humor, eller med inlägg av ord som knappast ser trovärdiga ut. Skall man använda långa
+                    stycken av Lorem Ipsum bör man försäkra sig om att det inte gömmer sig något pinsamt mitt i texten. Lorem
+                    Ipsum-generatorer på internet tenderar att repetera Lorem Ipsum-texten styckvis efter behov, något som
+                    gör denna sidan till den första riktiga Lorem Ipsum-generatorn på internet. Den använder ett ordförråd
+                    på över 200 ord, kombinerat med ett antal meningsbyggnadsstrukturer som tillsamman genererar Lorem Ipsum
+                    som ser ut som en normal mening. Lorem Ipsum genererad på denna sidan är därför alltid fri från repetitioner,
+                    humorinslag, märkliga ordformationer osv.
+                </p>
+            </div>
             <div class="progressBars">
-                <p align="center">Mina kunskaper</p>
+                <p class="kunskap" align="center">Mina kunskaper</p>
                 <progress value="20" max="100" data-label="HTML5 20%"></progress><br>
                 <progress value="30" max="100" data-label="CSS 30%"></progress><br>
                 <progress value="80" max="100" data-label="Java 80%"></progress><br>
@@ -95,18 +97,21 @@
             </div>
         </div>
         <div id="personSlide2" style="display:none;">
-            <img src="img/uberola.jpg" alt="bild på Ola" id="ola" align="left">
-            <h1 class="personText">Hej du!</h1>
-            <p class="personText">Det finns många olika varianter av Lorem Ipsum, men majoriteten av dessa har ändrats på någotvis. Antingen med
-                inslag av humor, eller med inlägg av ord som knappast ser trovärdiga ut. Skall man använda långa stycken
-                av Lorem Ipsum bör man försäkra sig om att det inte gömmer sig något pinsamt mitt i texten. Lorem Ipsum-generatorer
-                på internet tenderar att repetera Lorem Ipsum-texten styckvis efter behov, något som gör denna sidan till
-                den första riktiga Lorem Ipsum-generatorn på internet. Den använder ett ordförråd på över 200 ord, kombinerat
-                med ett antal meningsbyggnadsstrukturer som tillsamman genererar Lorem Ipsum som ser ut som en normal mening.
-                Lorem Ipsum genererad på denna sidan är därför alltid fri från repetitioner, humorinslag, märkliga ordformationer
-                osv.
-            </p>
-            <input type="image" id="nästaKnapp" src="img/arrowright.png" onclick="bytSlide()" />
+            <div class="bild">
+                <img src="img/uberola.jpg" alt="bild på Ola" id="ola" align="left">
+            </div>
+            <div class="personText">
+                <h1>Hej du!</h1>
+                <p>Det finns många olika varianter av Lorem Ipsum, men majoriteten av dessa har ändrats på någotvis. Antingen
+                    med inslag av humor, eller med inlägg av ord som knappast ser trovärdiga ut. Skall man använda långa
+                    stycken av Lorem Ipsum bör man försäkra sig om att det inte gömmer sig något pinsamt mitt i texten. Lorem
+                    Ipsum-generatorer på internet tenderar att repetera Lorem Ipsum-texten styckvis efter behov, något som
+                    gör denna sidan till den första riktiga Lorem Ipsum-generatorn på internet. Den använder ett ordförråd
+                    på över 200 ord, kombinerat med ett antal meningsbyggnadsstrukturer som tillsamman genererar Lorem Ipsum
+                    som ser ut som en normal mening. Lorem Ipsum genererad på denna sidan är därför alltid fri från repetitioner,
+                    humorinslag, märkliga ordformationer osv.
+                </p>
+            </div>>
             <div class="progressBars">
                 <p align="center">Mina kunskaper</p>
                 <progress value="60" max="100" data-label="HTML5 60%"></progress><br>
@@ -116,10 +121,14 @@
                 <progress value="85" max="100" data-label="Dricka kaffe 85%"></progress>
             </div>
         </div>
+        <div class="pilar"> <!-- Knapparna för att byta mellan slides -->
+            <a id="left" onclick="bytSlide()">&#10094;</a>
+            <a id="right" onclick="bytSlide()">&#10095;</a>
+        </div>
     </div>
 
     <!-- Mer utfyllnad av text -->
-    <div id="paragrafer">
+    <div class="omOss">
         <h2>Lorem Ipsum är en utfyllnadstext från tryck- och förlagsindustrin. <br> Lorem ipsum har varit standard ända sedan
             1500-talet, när en <br> okänd boksättare tog att antal bokstäver och blandade dem för <br> att göra ett provexemplar
             av en bok. Lorem ipsum har inte bara överlevt <br> fem århundraden, utan även övergången till elektronisk typografi
