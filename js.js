@@ -1,3 +1,4 @@
+//Animation för navbaren
 $(document).scroll(function(){
     if($(document).scrollTop() > 150) {
         $("nav, .plogo").addClass("scroll");
@@ -19,8 +20,29 @@ function bytSlide() {
  }
 
  $(document).ready(function () {
+     //Animation för scroll till toppen av sidan
+     $("#linkHome").click(function () {
+        $path = $("#home").offset().top;
+        event.preventDefault();
+        $('body').animate({ scrollTop: $path }, 750);
+    })
+    //Animation för scroll till anchorPoint1
     $("#link1").click(function () {
-        $path = $("#Box1").offset().top;
+        $path = $("#anchor1").offset().top;
+        event.preventDefault();
+        $('body').animate({ scrollTop: $path }, 1000);
+    })
+
+    //Animation för scroll till anchorPoint2
+    $("#link2").click(function () {
+        $path = $("#anchor2").offset().top;
+        event.preventDefault();
+        $('body').animate({ scrollTop: $path }, 1000);
+    })
+
+    //Animation för scroll till anchorPoint3
+    $("#link3").click(function () {
+        $path = $("#anchor3").offset().top;
         event.preventDefault();
         $('body').animate({ scrollTop: $path }, 1000);
     })
