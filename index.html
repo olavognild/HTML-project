@@ -26,9 +26,9 @@
         </div>
 
         <ul id="lista">
-            <li class="li1"><a href="anchor1" id="link1">Om oss</a></li>
-            <li class="li2"><a href="anchor2" id="link2">Ola</a></li>
-            <li class="li3"><a href="anchor3" id="link3">Timmy</a></li>
+            <li class="li1"><a href="anchor1" id="link1">Gruppen</a></li>
+            <li class="li2"><a href="anchor2" id="link2">Om oss</a></li>
+            <li class="li3"><a href="anchor3" id="link3">Kontakt</a></li>
         </ul>
     </nav>
 
@@ -67,11 +67,11 @@
     <!-- Andra bakgrunden -->
     <div class="bgimg2" id="anchor2"></div>
 
-    <!-- AnchorPoint för personsidorna -->
-    <div class="anchorPoint" id="anchor3"></div>
+
+
     <!-- Div som innehåller informationen om oss -->
     <div class="person">
-        <div id="personSlide1"> 
+        <div id="personSlide1">
             <div class="bild">
                 <img src="img/timmy.jpg" alt="bild på Timmy" id="timmy" align="left">
             </div>
@@ -121,14 +121,15 @@
                 <progress value="85" max="100" data-label="Dricka kaffe 85%"></progress>
             </div>
         </div>
-        <div class="pilar"> <!-- Knapparna för att byta mellan slides -->
+        <div class="pilar">
+            <!-- Knapparna för att byta mellan slides -->
             <a id="left" onclick="bytSlide()">&#10094;</a>
             <a id="right" onclick="bytSlide()">&#10095;</a>
         </div>
     </div>
 
     <!-- Mer utfyllnad av text -->
-    <div class="omOss">
+    <div class="omGrupp">
         <h2>Lorem Ipsum är en utfyllnadstext från tryck- och förlagsindustrin. <br> Lorem ipsum har varit standard ända sedan
             1500-talet, när en <br> okänd boksättare tog att antal bokstäver och blandade dem för <br> att göra ett provexemplar
             av en bok. Lorem ipsum har inte bara överlevt <br> fem århundraden, utan även övergången till elektronisk typografi
@@ -153,29 +154,39 @@
     </div>
 
     <!-- Parallax för kontakt -->
-    <div class="bgimg3"></div>
-
-    <!-- Här börjar kontaktdelen -->
-    <div id="concactPage">
-
-        <!-- Rubrik -->
-        <h1 class="contactHead">Kontakta oss</h1>
-
-        <div class="classContact" id="idContact">
-
-            <input type="text" class=" txtFields" id="contactNamn" placeholder="Namn">
-            <input type="text" class=" txtFields" id="contactTlf" placeholder="Telefonnummer">
-            <input type="text" class=" txtFields" id="contactMail" placeholder="Mail">
-            <input type="text" class=" txtFields" id="contactMsg" placeholder="Meddelande">
-
-        </div>
+    <div class="bgimg3">
+        <!-- AnchorPoint för contact -->
+        <div class="anchorPoint" id="anchor3"></div>
     </div>
 
-    <br>
-    <br>
+    <!-- Här börjar kontaktdelen -->
+
+    <!-- Rubrik -->
+    <h1 class="contactHead" id="h1Contact">Kontakta oss</h1>
+
+    <h4 class="contactHead">Vill du ha dank memes? Skriv till oss!</h4>
+
+
+
+    <div class="classContact" id="idContact">
+        <input type="text" class="namn" placeholder="Namn" title="Ditt namn">
+        <input type="text" class="tlf" placeholder="Telefonnummer" title="Ditt telefonnummer">
+    </div>
+
+    <div class="mailen">
+        <input type="text" class="mail" placeholder="Mail" title="Din mailadress">
+    </div>
+    <div class="msg">
+        <input type="text" class="contactMsg" placeholder="Meddelande" title="Skriv ett meddelande">
+    </div>
+
+    <!-- Google maps -->
+    <div id="googleMap" class="google"></div>
+
 
     <!-- Javascript -->
     <script src="js.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAkpefXv05DyQFPQN2VPlz2pApCJU3_x7Y&callback=googleMaps"></script>
 </body>
 
 </html>

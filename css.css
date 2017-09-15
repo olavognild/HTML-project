@@ -3,7 +3,7 @@ body, html{
     height: 100%;
     padding: 0;
     margin: 0;
-    background-color:brown;
+    background-color:silver;
     font-size: 100%;
 }
 
@@ -127,7 +127,7 @@ div.logodiv{
 }
 
 /*BÖR VI KANSKE TITTA PÅ DENNA?*/
-#omGrupp{
+.omGrupp{
     padding: 2%;
     font-family: 'Scope One', serif;
 }
@@ -210,8 +210,65 @@ progress:before {
     font-family: 'Scope One', serif;
 }
 
-/* Textfält för kontakt */
-.txtFields{
-    height: 25px;
-    width: 20%;
+h4{
+    font-style: italic;
 }
+
+#h1Contact{
+    padding-top: 2%;
+}
+
+h4{
+    padding-bottom: 2%;
+}
+
+
+/* Css för kontakta-oss */
+.classContact, .mailen, .msg{
+    width: 100%;
+    align-items: center;
+    padding-left: 33%;
+}
+
+.namn, .tlf{
+    margin-top: 2%;
+    height: 32px;
+}
+
+.namn{
+    width: 16%;
+}
+
+.tlf{
+    width: 16.3%;
+}
+
+.mail{
+    margin-top: 1%;
+    height: 32px;
+    width: 33%;
+    margin-bottom: 1%;
+}
+
+.contactMsg{
+    width: 33%;
+    height: 64px;
+}
+
+/* input i textfälten */
+input[type='text'] {
+    font-family: "Lato", sans-serif;
+    background-color: #EDEDED;
+}
+
+
+/* placering och storlek av GoogleMaps */
+.google{
+    margin-left: 15%;
+    height: 50%;
+    width: 15%;
+    border-radius: 7%;
+    margin-top: 2%;
+    margin-bottom: 5%;
+}
+
