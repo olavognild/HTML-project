@@ -49,6 +49,60 @@ $(document).ready(function () {
 })
 
 
+//bildspel
+var images = ["img/port1.jpg", "img/port2.png", "img/port3.png"];
+var imageNumber = 0;
+var imageLength = images.length -1;
+
+//byt till nästa bild
+function changeImage() {
+    imageNumber++;
+
+    if (imageNumber > imageLength) {
+        imageNumber = 0;
+    }
+    document.getElementById("slideshow").src = images[imageNumber];
+}
+
+document.getElementById("nästaknapp").addEventListener("click", changeImage);
+
+//byt till föregående bild
+function lastImage() {
+    imageNumber--;
+
+    if (imageNumber < 0) {
+        imageNumber = imageLength;
+    }
+    document.getElementById("slideshow").src = images[imageNumber];
+}
+
+document.getElementById("föregåendeknapp").addEventListener("click", lastImage);
+
+//Gör att bildspelet rullar på/stannar
+var stopp = false;
+
+var intervalHandle = setInterval(changeImage, 1000);
+
+function bildTimer() {
+    if(!stopp){
+        clearInterval(intervalHandle);  
+        stopp = true;
+    } else {
+        intervalHandle = setInterval(changeImage, 1000);
+        stopp = false;
+    }
+}
+
+document.getElementById("startstopp").addEventListener("click", bildTimer);
+
+//Byter text på knapp beroende på om bildspelet rullar eller inte
+function bytText(){
+var startstoppen = document.getElementById("startstopp");
+if (startstoppen.value=="Stoppa") startstoppen.value = "Starta";
+else startstoppen.value = "Stoppa";
+}
+
+
 
 
 function googleMaps() {
