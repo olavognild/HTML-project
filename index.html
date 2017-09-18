@@ -5,9 +5,11 @@
     <title>Grupp 28</title>
 
     <meta charset="UTF-8">
-
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Anpassa bredd på sidan mot använd device-->
     <!--css -->
-    <link rel="stylesheet" href="css.css">
+    <link rel="stylesheet" href="min768.css">
+    <link rel="stylesheet" href="max768.css">
     <!-- fonts -->
     <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
@@ -123,11 +125,9 @@
                 <progress value="85" max="100" data-label="Dricka kaffe 85%"></progress>
             </div>
         </div>
-        <div class="pilar">
-            <!-- Knapparna för att byta mellan slides -->
-            <a id="left" onclick="bytSlide()">&#10094;</a>
-            <a id="right" onclick="bytSlide()">&#10095;</a>
-        </div>
+        <!-- Knapparna för att byta mellan slides -->
+        <a id="left" onclick="bytSlide()">&#10094;</a>
+        <a id="right" onclick="bytSlide()">&#10095;</a>
     </div>
 
     <!-- Parallax för portfoliot -->
