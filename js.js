@@ -121,3 +121,39 @@ function googleMaps() {
 }
 
 //Validering av textfält
+var vnamn = document.getElementById("namn");
+var vTlf = document.getElementById("tlf");
+var vMail = document.getElementById("mail");
+var vMsg = document.getElementById("contactMsg");
+
+
+function validera(element, regex) {
+
+    var value = element.value;
+    var valid = regex.test(value);
+
+    element.style.backgroundColor = valid ? "green" : "red";
+    if(value.length < 1){
+        element.style.backgroundColor = "white";
+    }
+}
+
+vnamn.addEventListener("keyup", function(){
+
+    validera(vnamn, /[a-zA-Z]{1,50}/);
+})
+
+vTlf.addEventListener("keyup", function(){
+
+    validera(vTlf, /[^a-z0-9]{4,20}/);
+})
+
+vMail.addEventListener("keyup", function(){
+
+    validera(vMail, /[a-zA-Z0-9.-_@]{5,100}/);
+})
+
+vMsg.addEventListener("keyup", function(){
+
+    validera(vMsg, /.{2,250}/);
+})

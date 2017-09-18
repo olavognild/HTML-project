@@ -95,17 +95,16 @@ div.logodiv{
     background-image: url("img/paraImg1.png");
 }
 
-/*Welcome text*/
+
+
 .welcomeTxt{
     position: absolute;
     top: 50%;
     left: 50%;
-    height: 10%;
-    width: 25%;
     transform: translate(-50%,-50%);
     opacity: 0.9;
     text-align: center;
-    font-size: 3em;
+    font-size: 4vw;
     font-weight: bold;
     color: white;
     background-color: black;
@@ -205,6 +204,11 @@ progress:before {
     right: 0;
 }
 
+/*Parallax 4*/
+.bgimg4 {
+    background-image: url("img/paraImg4.jpg");
+    min-height: 70%;
+}
 .contactHead{
     text-align: center;
     font-family: 'Scope One', serif;
@@ -219,7 +223,7 @@ h4{
 }
 
 h4{
-    padding-bottom: 2%;
+    padding-bottom: 1%;
 }
 
 
@@ -227,16 +231,17 @@ h4{
 .classContact, .mailen, .msg{
     width: 100%;
     align-items: center;
-    padding-left: 33%;
 }
 
 .namn, .tlf{
-    margin-top: 2%;
+    margin-top: 1%;
     height: 32px;
+    
 }
 
 .namn{
     width: 16%;
+    margin-left: 33%;
 }
 
 .tlf{
@@ -248,11 +253,13 @@ h4{
     height: 32px;
     width: 33%;
     margin-bottom: 1%;
+    margin-left: 33%;
 }
 
 .contactMsg{
     width: 33%;
     height: 64px;
+    margin-left: 33%;
 }
 
 /* input i textfälten */
@@ -261,23 +268,20 @@ input[type='text'] {
     background-color: #EDEDED;
 }
 
+.formulärBtn{
+    background-color: red;
+}
 
 /* placering och storlek av GoogleMaps */
 .google{
-    margin-left: 15%;
+    margin: auto;
     height: 50%;
-    width: 15%;
-    border-radius: 7%;
+    width: 70%;
+    border-radius: 20px;
     margin-top: 2%;
     margin-bottom: 5%;
 }
 
-
-/*Parallax 4*/
-.bgimg4 {
-    background-image: url("img/paraImg4.jpg");
-    min-height: 70%;
-}
 
 /*portfolio div*/
 #portfolio{

@@ -34,7 +34,9 @@
 
     <!-- första bakgrunden -->
     <div class="bgimg1" id="home">
-        <p class="welcomeTxt">WELCOME</p>
+        <div class="välkomstTxt">
+            <p class="welcomeTxt">WELCOME</p>
+        </div>
     </div>
 
     <div class="anchorPoint" id="anchor1"></div>
@@ -111,7 +113,7 @@
                     som ser ut som en normal mening. Lorem Ipsum genererad på denna sidan är därför alltid fri från repetitioner,
                     humorinslag, märkliga ordformationer osv.
                 </p>
-            </div>>
+            </div>
             <div class="progressBars">
                 <p align="center">Mina kunskaper</p>
                 <progress value="60" max="100" data-label="HTML5 60%"></progress><br>
@@ -158,20 +160,25 @@
     <h4 class="contactHead">Vill du ha dank memes? Skriv till oss!</h4>
 
 
+    <!-- Textfält -->
 
     <div class="classContact" id="idContact">
-        <input type="text" class="namn" placeholder="Namn" title="Ditt namn">
-        <input type="text" class="tlf" placeholder="Telefonnummer" title="Ditt telefonnummer">
+        <input type="text" class="namn" id="namn" placeholder="Namn" title="Ditt namn">
+        <input type="text" class="tlf" id="tlf" placeholder="Telefonnummer" title="Ditt telefonnummer">
     </div>
 
     <div class="mailen">
-        <input type="text" class="mail" placeholder="Mail" title="Din mailadress">
+        <input type="text" class="mail" id="mail" placeholder="Mail" title="Din mailadress">
     </div>
     <div class="msg">
-        <input type="text" class="contactMsg" placeholder="Meddelande" title="Skriv ett meddelande">
+        <input type="text" class="contactMsg" id="contactMsg" placeholder="Meddelande" title="Skriv ett meddelande">
     </div>
 
+    <button class="formulärBtn">Skicka</button>
+
     <!-- Google maps -->
+
+    <h4 class="contactHead">Här finns vi:</h4>
     <div id="googleMap" class="google"></div>
 
 
