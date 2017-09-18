@@ -270,7 +270,12 @@ h4{
 /* input i textfälten */
 input[type='text'] {
     font-family: "Lato", sans-serif;
-    background-color: #EDEDED;
+    border: 2px solid steelblue;
+}
+
+textarea[type='text'] {
+    font-family: "Lato", sans-serif;
+    border: 2px solid steelblue;
 }
 
 .formulärBtn{
