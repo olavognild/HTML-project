@@ -128,6 +128,53 @@
         min-height: 70%;
     }
     
+    #h1Rubrik{
+        font-weight: bold;
+        font-size: 2em;
+        text-align: center;
+    }
+
+/* första stycket */
+    .about1{
+        width: 100%;
+        display: block;
+    }
+
+    .ooP1, .ooP3{
+        margin-left: 14%;
+        width: 30%;
+        float: left;
+        text-align: right;
+    }
+    .ooImg1, .ooImg3{
+        margin-top: 1%;
+        margin-left: 1%;
+      
+    }
+
+/* andra stycket */
+
+    .about2, .about3{
+        width: 100%;
+        padding-top: 10%;
+    }
+
+    .ooImg2{
+        margin-left: 45%;
+        display: inline;
+    }
+
+    .ooP2{
+        margin-right: 20%;
+        text-align: left;
+        float: right;
+    }
+
+    .about3{
+        margin-bottom: 10%;
+    }
+
+
     /*BÖR VI KANSKE TITTA PÅ DENNA?*/
     .omGrupp{
         margin: 2%;
