@@ -12,7 +12,7 @@
     position: fixed;
     width: 100%; 
     height: 50%;
-    background-color: #212529;
+    background-color: #504A4A;
     z-index: 998;
     align-items: center;
     transition: all .4s;
@@ -34,14 +34,17 @@
         transition: all .4s;
     }
 
-    #burger-container{
+    #burgar-div{
         position: fixed;
         width: 100%;
         height: 10%;
         z-index: 1000;
-        padding: 10px;
-        background-color: #212529;
-       
+        background-color: #504A4A;
+    }
+
+    #burger{
+       margin-left: 3%;
+       margin-top: 3%;
     }
     
     /* Css för varje "streck" i burgaren */
@@ -57,19 +60,19 @@
     }
     
     /* Tar bort middenstrecket */
-    #burger-container.open span:nth-child(2){
+    #burgar-div.open span:nth-child(2){
         width: 0;
         opacity: 0;
     }
     
     /* Animerar burgarmenyn */
-    #burger-container.open span:nth-child(1){
+    #burgar-div.open span:nth-child(1){
         transform: rotate(-45deg);
         top: 20px;
     }
     
     /* Animerar burgarmenyn */
-    #burger-container.open span:nth-child(3){
+    #burgar-div.open span:nth-child(3){
         transform: rotate(45deg);
         top: -20px;
     }
@@ -122,18 +125,24 @@
     /*Parallax 2*/
     .bgimg2{
         background-image: url("img/paraImg2.jpg");
-        min-height: 70%;
+        min-height: 40%;
     }
     
     /*Parallax 3*/
     .bgimg3{
         background-image: url("img/paraImg3.jpg");
-        min-height: 70%;
+        min-height: 40%;
     }
-    
+
+    /*Parallax 4*/
+    .bgimg4 {
+        background-image: url("img/paraImg4.jpg");
+        min-height: 40%;
+    }
+
     /*Om grupp*/
     .omGrupp{
-        padding: 2%;
+        margin: 2%;
         font-family: 'Scope One', serif;
         font-size: 1.2em;
     }
@@ -147,28 +156,44 @@
     }
     
     /*Bilddiv*/
-    .bild {
-        margin-left: 18%;
-        padding: 2%;
+    .timmysBild {
+        margin: 2%;
         float: left;
+        height: 20%;
+        width: 10%;
+    }
+    
+    #timmy{
+        width: 100%;
+        height: 100%;
+    }
+    
+    .olasBild{
+        margin: 2%;
+        float: left;
+        height: 20%;
+        width: 20%;
+    }
+    
+    #ola{
+        width: 100%;
         height: 100%;
     }
     
     /*Textdiv i personSlide*/
-    .personText {
-        margin-left: 15%;
-        padding-left: 4%;
+    .personText, .personTextTimmy {
         height: 100%;
-        width: 60%;
+        width: 80%;
         text-align: center;
         float: left;
         font-family: 'Scope One', serif;
         font-size: 1.2em;
+        margin-left: 15%;
     }
     
     /*Progressbar*/
     .progressBars {
-        padding-left: 25%;
+        margin-left: 25%;
         float: left;
         padding-bottom: 20%;
     }
@@ -207,13 +232,13 @@
     
     /*Den vänstra knappens position*/
     #left {
-        padding-left: 33%;
+        margin-left: 33%;
         left: 0;
     }
     
     /* Den högra knappens position*/
     #right {
-        padding-right: 33%;
+        margin-right: 33%;
         right: 0;
     }
     
@@ -239,6 +264,8 @@
     .classContact, .mailen, .msg{
         width: 100%;
         align-items: center;
+        margin-bottom: 1%;
+        margin-left: 25%;
     }
     
     .namn, .tlf{
@@ -247,22 +274,22 @@
     }
     
     .namn{
-        width: 16%;
+        width: 25%;
     }
     
     .tlf{
-        width: 16.3%;
+        width: 25%;
     }
     
     .mail{
         margin-top: 1%;
         height: 32px;
-        width: 33%;
+        width: 50%;
         margin-bottom: 1%;
     }
     
     .contactMsg{
-        width: 33%;
+        width: 50%;
         height: 64px;
     }
     
@@ -272,23 +299,31 @@
         background-color: #EDEDED;
     }
     
+    #contactBtn{
+        height: 5%;
+        width: 14%;
+        margin-left: 60%;
+        border: 2px solid steelblue;
+        font-family: "Lato", sans-serif;
+        border-radius: 8px;
+    }
+    
+    #contactBtn:hover{
+        background-color: steelblue;
+        color: white;
+    }
     
     /* placering och storlek av GoogleMaps */
     .google{
-        margin-left: 15%;
+        margin-left: 20%;
         height: 50%;
-        width: 15%;
-        border-radius: 7%;
+        width: 60%;
         margin-top: 2%;
         margin-bottom: 5%;
     }
     
     
-    /*Parallax 4*/
-    .bgimg4 {
-        background-image: url("img/paraImg4.jpg");
-        min-height: 70%;
-    }
+
     
     /*portfolio div*/
     #portfolio{
@@ -302,7 +337,8 @@
     #slideshow{
         width: 75%;
         max-height: 75%;
-        padding-left: 15%;
+        margin-left: 15%;
+        box-shadow: 2px -2px 100px rgba(0,0,0,.5);
     }
     
     /*div för texten*/
@@ -312,7 +348,7 @@
     }
     /*div för knapparna*/
     .portKnapp {
-        padding-left:40%;
+        margin-left:40%;
     }
     
     /*lite kopiering av knapparna från tidigare div*/
@@ -326,29 +362,28 @@
     }
     
     #nästaknapp {
-        padding-right: 25%;
+        margin-right: 25%;
         right: 0;
     }
     
     #föregåendeknapp {
-        padding-left: 25%;
+        margin-left: 25%;
         left: 0;
     }
     
     #startstopp {
-        margin-left: 1%;
+        margin-left: 10%;
         font-size: 20px;
-        background-color: white;
-        color: black;
+        border: 2px solid steelblue;
+        font-family: "Lato", sans-serif;
         border-radius: 8px;
         margin-top: 2%;
-        border: 2px solid black;
-        opacity: 0.5;
         transition-duration: 0.6s;
     }
     
     #startstopp:hover {
         opacity: 1;
-        background-color: lightgray;
+        background-color: steelblue;
+        color: white;
     }
 }

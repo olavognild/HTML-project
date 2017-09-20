@@ -135,38 +135,55 @@ function validera(element, regex) {
     }
 }
 
+$(document).ready(function () {
+    $("#contactBtn").on("click", function () {
+
+        var namnTxt = document.getElementById("namn").value;
+        var tlfTxt = document.getElementById("tlf").value;
+        var mailTxt = document.getElementById("mail").value;
+        var msgTxt = document.getElementById("contactMsg").value;
+
+        var namnLength = namnTxt.length;
+        var tlfLength = tlfTxt.length;
+        var mailLength = mailTxt.length;
+        var msgLength = msgTxt.length;
+
+
+    });
+})
+
 vnamn.addEventListener("keyup", function () {
 
-    validera(vnamn, /^[a-zA-ZåäöÅÄÖ ]{1,50}$/);
+    validera(vnamn, /^[a-zA-ZåäöÅÄÖ -]{1,50}$/);
 })
 
 vTlf.addEventListener("keyup", function () {
 
-    validera(vTlf, /^[0-9 ]{3,7}$/);
+    validera(vTlf, /^[0-9- ]{3,20}$/);
 })
 
 vMail.addEventListener("keyup", function () {
 
-    validera(vMail, /[a-zA-Z0-9.-_@]{5,100}/);
+    validera(vMail, /[a-zA-Z0-9\._-]+@[a-zA-Z-.]+\.[a-zA-Z]{1,50}$/);
 })
 
 vMsg.addEventListener("keyup", function () {
 
-    validera(vMsg, /.{2,250}/);
+    validera(vMsg, /^.{1,250}$/);
 })
 
 
 //Hamburgarmeny
 $(document).ready(function () {
-    $("#burger-container").on('click', function () {
+    $("#burgar-div").on('click', function () {
         $(this).toggleClass("open");
     });
 });
 
 $(document).ready(function () {
-    $("#burger-container").on("click", function () {
+    $("#burgar-div").on("click", function () {
 
-        var currentClass = $("#burger-container").attr("class");
+        var currentClass = $("#burgar-div").attr("class");
 
         if (currentClass === "open") {
             $("#div-menu").removeClass("hidden").addClass("open-menu");
