@@ -47,7 +47,11 @@ $(document).ready(function () {
         $('body').animate({ scrollTop: $path }, 1000);
     })
 
-    fetch('https://api.github.com/search/repositories?q=language:javascript+created:>2017-09-13&sort=stars&order=desc')
+    var datum = new Date();
+    datum.setDate(datum.getDate()-7);
+    var tidigareDatum = datum.toISOString().slice(0,10);
+
+    fetch('https://api.github.com/search/repositories?q=language:javascript+created:>' + tidigareDatum + '&sort=stars&order=desc')
         .then(response => response.json())
         .then(data => {
             for (var i = 0; i < 5; i++) {
@@ -60,7 +64,7 @@ $(document).ready(function () {
             }
         });
 
-    fetch('https://api.github.com/search/repositories?q=language:css+created:>2017-09-13&sort=stars&order=desc')
+        fetch('https://api.github.com/search/repositories?q=language:css+created:>' + tidigareDatum + '&sort=stars&order=desc')
         .then(response => response.json())
         .then(data => {
             for (var i = 0; i < 5; i++) {
