@@ -146,6 +146,21 @@
         font-family: 'Scope One', serif;
         font-size: 1.2em;
     }
+
+    #jstrend {
+        line-height: 2;   
+        font-size: 0.8em;
+    }
+
+    #csstrend {
+        line-height: 2;
+        font-size: 0.8em;
+    }
+
+    .trendh3 {
+        text-decoration: underline;
+    }
+
     
     /*Persondiv*/
     .person {
@@ -262,10 +277,13 @@
     
     /* Css för kontakta-oss */
     .classContact, .mailen, .msg{
-        width: 100%;
         align-items: center;
         margin-bottom: 1%;
         margin-left: 25%;
+    }
+
+    .kontaktwrapper {
+        width: 100%;
     }
     
     .namn, .tlf{
@@ -284,12 +302,12 @@
     .mail{
         margin-top: 1%;
         height: 32px;
-        width: 50%;
+        width: 55%;
         margin-bottom: 1%;
     }
     
     .contactMsg{
-        width: 50%;
+        width: 55%;
         height: 64px;
     }
     

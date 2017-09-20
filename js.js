@@ -46,6 +46,32 @@ $(document).ready(function () {
         event.preventDefault();
         $('body').animate({ scrollTop: $path }, 1000);
     })
+
+    fetch('https://api.github.com/search/repositories?q=language:javascript+created:>2017-09-13&sort=stars&order=desc')
+    .then(response => response.json())
+    .then(data => {
+      for(var i = 0; i < 5; i++) {
+          var item = data.items[i];
+          var linknamn = data.items[i].html_url;
+          var projektnamn = data.items[i].name;
+          var linkägare = data.items[i].owner.html_url;
+          var anvnamn = data.items[i].owner.login;
+          $('#jstrend').append(" - Namn: " + "<a target=" + "'_blank'" +  "href='" + linknamn + "'>" + "<strong>" + projektnamn + "</strong>" + "</a>" + " | Ägare: " + "<a href='" + linkägare + "'>" + "<strong>" + anvnamn + "</strong>" + "</a>" + " | Stjärnor: " + item.stargazers_count + "<br>");
+      }
+    });
+
+    fetch('https://api.github.com/search/repositories?q=language:css+created:>2017-09-13&sort=stars&order=desc')
+    .then(response => response.json())
+    .then(data => {
+      for(var i = 0; i < 5; i++) {
+          var item = data.items[i];
+          var linknamn = data.items[i].html_url;
+          var projektnamn = data.items[i].name;
+          var linkägare = data.items[i].owner.html_url;
+          var anvnamn = data.items[i].owner.login;
+          $('#csstrend').append(" - Namn: " + "<a target=" + "'_blank'" +  "href='" + linknamn + "'>" + "<strong>" + projektnamn + "</strong>" + "</a>" + " | Ägare: " + "<a href='" + linkägare + "'>" + "<strong>" + anvnamn + "</strong>" + "</a>" + " | Stjärnor: " + item.stargazers_count + "<br>");
+      }
+    });
 })
 
 

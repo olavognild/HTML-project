@@ -133,6 +133,30 @@
         margin: 2%;
         font-family: 'Scope One', serif;
     }
+
+    #trenddiv {
+        width: 100%;
+        display: inline-block;
+    }
+    
+    #jstrend {
+        width: 50%;
+        line-height: 2;   
+        font-size: 1.2em;
+        float: left;
+    }
+    
+    #csstrend {
+        width: 50%;
+        line-height: 2;
+        font-size: 1.2em;
+        float: left;
+    
+    }
+    
+    .trendh3 {
+        text-decoration: underline;
+    }
     
     /*Persondiv*/
     .person {
