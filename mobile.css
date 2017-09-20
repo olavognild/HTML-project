@@ -8,42 +8,70 @@
         font-size: 100%;
     }
     
-    /* Navbar med meny */
-    .meny{
-        width: 100%;   
-        height: 20%;
-        display: flex;
-        align-items: center;
-        text-align: center;
+.open-menu{
+    position: fixed;
+    width: 100%; 
+    height: 50%;
+    background-color: #212529;
+    z-index: 998;
+    align-items: center;
+    transition: all .4s;
+}
+
+.hidden{
+    display: none;
+    transition: all .4s;
+}
+
+.open-list{
+        display: inline-block;
         position: fixed;
-        background: transparent;
+        z-index: 999;
+        font-family: "Lato", sans-serif;
+        font-size: 2em;
+        list-style-type: none;
+        padding-top: 15%;
         transition: all .4s;
-        z-index: 2;
     }
-    
-    
-    ul{
+
+    #burger-container{
+        position: fixed;
         width: 100%;
+        height: 10%;
+        z-index: 1000;
+        padding: 10px;
+        background-color: #212529;
+       
+    }
+    
+    /* Css för varje "streck" i burgaren */
+    #burger span{
+        background: black;
         display: block;
-        list-style: none;
+        width: 50px;
+        height: 10px;
+        margin-bottom: 10px;
+        position: relative;
+        top: 0;
+        transition: all ease-in-out 0.4s;
     }
     
-    li{
-        font-family: 'Lobster', Georgia, Times, serif;
-        display: inline;
-        color: black;
-        font-weight: bold;
-        padding: 2%;
-        font-size: 3.5vw;
+    /* Tar bort middenstrecket */
+    #burger-container.open span:nth-child(2){
+        width: 0;
+        opacity: 0;
     }
     
-    /* Hover i menyn*/
-    a:hover{
-        color: #323131;
+    /* Animerar burgarmenyn */
+    #burger-container.open span:nth-child(1){
+        transform: rotate(-45deg);
+        top: 20px;
     }
     
-    #linkHome:hover, #link1:hover, #link2:hover, #link3:hover{
-        font-size: larger;
+    /* Animerar burgarmenyn */
+    #burger-container.open span:nth-child(3){
+        transform: rotate(45deg);
+        top: -20px;
     }
     
     a {
@@ -52,36 +80,10 @@
     }
     
     div.logodiv{
-        padding: 10%;
-        width: 30%;
+        display: none;
     }
     
-    .plogo{
-        font-family: 'Lobster', Georgia, Times, serif;
-        font-weight: bold;
-        font-size: 4.5vw    ;
-        transition: all .4s;
-    }
-    
-     /* scrollfunktionen */
-    .scroll{
-        height: 10%;
-        width: 100%;
-        padding-top: 0;
-        font-size: 1em;
-        background-color: rgba(39, 38, 38, 0.50);
-        box-shadow: 0px 0px 1px 2px black;
-        transition: all .4s;
-    }
-    
-    /* Scrollfunktion för <p> på loggan */
-    .scroll.plogo{
-        background: transparent;
-        font-size: 1.7em;
-        transition: all .4s;
-        box-shadow: 0px 0px 0px 0px white;
-    }
-    
+
     /* bakgrundsbilder */
     .bgimg1, .bgimg2, .bgimg3, .bgimg4{
         min-height: 100%;
@@ -94,6 +96,10 @@
      /*Parallax 1*/
     .bgimg1{
         background-image: url("img/paraImg1.png");
+    }
+
+    #anchor1{
+        padding-top: 2%;
     }
     
     /*Welcome text*/
@@ -233,7 +239,6 @@
     .classContact, .mailen, .msg{
         width: 100%;
         align-items: center;
-        padding-left: 33%;
     }
     
     .namn, .tlf{

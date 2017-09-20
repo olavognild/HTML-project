@@ -49,12 +49,12 @@ $(document).ready(function () {
 })
 
 
-//bildspel
+//Bildspel
 var images = ["img/port1.jpg", "img/port2.png", "img/port3.png"];
 var imageNumber = 0;
-var imageLength = images.length -1;
+var imageLength = images.length - 1;
 
-//byt till nästa bild
+//Byt till nästa bild
 function changeImage() {
     imageNumber++;
 
@@ -84,8 +84,8 @@ var stopp = false;
 var intervalHandle = setInterval(changeImage, 1000);
 
 function bildTimer() {
-    if(!stopp){
-        clearInterval(intervalHandle);  
+    if (!stopp) {
+        clearInterval(intervalHandle);
         stopp = true;
     } else {
         intervalHandle = setInterval(changeImage, 1000);
@@ -96,14 +96,11 @@ function bildTimer() {
 document.getElementById("startstopp").addEventListener("click", bildTimer);
 
 //Byter text på knapp beroende på om bildspelet rullar eller inte
-function bytText(){
-var startstoppen = document.getElementById("startstopp");
-if (startstoppen.value=="Stoppa") startstoppen.value = "Starta";
-else startstoppen.value = "Stoppa";
+function bytText() {
+    var startstoppen = document.getElementById("startstopp");
+    if (startstoppen.value == "Stoppa") startstoppen.value = "Starta";
+    else startstoppen.value = "Stoppa";
 }
-
-
-
 
 function googleMaps() {
     //Google Map
@@ -133,27 +130,51 @@ function validera(element, regex) {
     var valid = regex.test(value);
 
     element.style.backgroundColor = valid ? "green" : "red";
-    if(value.length < 1){
+    if (value.length < 1) {
         element.style.backgroundColor = "white";
     }
 }
 
-vnamn.addEventListener("keyup", function(){
+vnamn.addEventListener("keyup", function () {
 
-    validera(vnamn, /[a-zA-Z]{1,50}/);
+    validera(vnamn, /^[a-zA-ZåäöÅÄÖ ]{1,50}$/);
 })
 
-vTlf.addEventListener("keyup", function(){
+vTlf.addEventListener("keyup", function () {
 
-    validera(vTlf, /[^a-z0-9]{4,20}/);
+    validera(vTlf, /^[0-9 ]{3,7}$/);
 })
 
-vMail.addEventListener("keyup", function(){
+vMail.addEventListener("keyup", function () {
 
     validera(vMail, /[a-zA-Z0-9.-_@]{5,100}/);
 })
 
-vMsg.addEventListener("keyup", function(){
+vMsg.addEventListener("keyup", function () {
 
     validera(vMsg, /.{2,250}/);
 })
+
+
+//Hamburgarmeny
+$(document).ready(function () {
+    $("#burger-container").on('click', function () {
+        $(this).toggleClass("open");
+    });
+});
+
+$(document).ready(function () {
+    $("#burger-container").on("click", function () {
+
+        var currentClass = $("#burger-container").attr("class");
+
+        if (currentClass === "open") {
+            $("#div-menu").removeClass("hidden").addClass("open-menu");
+            $("#div-lista").removeClass("hidden").addClass("open-list");
+        } else {
+            $("#div-menu").removeClass("open-menu").addClass("hidden");
+            $("#div-lista").removeClass("open-list").addClass("hidden");
+        }
+
+    });
+});
