@@ -137,43 +137,55 @@
     }
 
 /* första stycket */
-    .about1{
+    .about1 .about3{
         width: 100%;
         display: block;
     }
 
-    .ooP1, .ooP3{
+    .ooP1{
         margin-left: 14%;
         width: 30%;
         float: left;
         text-align: right;
     }
-    .ooImg1, .ooImg3{
+    .ooImg1{
         margin-top: 1%;
         margin-left: 1%;
-      
+    }
+
+    .about3{
+        width: 100%;
+        padding-top: 10%;
+    }
+
+    .ooP3{
+        margin-left: 14%;
+        width: 30%;
+        float: left;
+        text-align: right;
+    }
+
+    .ooImg3{
+        float: left;
     }
 
 /* andra stycket */
 
-    .about2, .about3{
+    .about2{
         width: 100%;
+        height: 70%;
         padding-top: 10%;
     }
 
     .ooImg2{
         margin-left: 45%;
-        display: inline;
+        float: left;
     }
 
     .ooP2{
-        margin-right: 19%;
+        width: 30%;
         text-align: left;
-        float: right;
-    }
-
-    .about3{
-        margin-bottom: 5%;
+        float: left;
     }
 
     .ooP1, .ooP2, .ooP3{
@@ -183,6 +195,7 @@
 
 
     #trenddiv {
+        padding-top: 3%;
         width: 100%;
         font-family: 'Scope One', serif;
         margin-bottom: 3%;
@@ -501,7 +514,7 @@
         color: white;
     }
 
-    .info-hidden {
+    .info-hidden, #motAnchorOla{
         display: none;
     }
     .info-visible {

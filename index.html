@@ -34,7 +34,7 @@
             </ul>
         </div>
 
-        <!-- Burgarmenyn -->
+        <!-- Burgarmenyn som visas i telefonen-->
         <div id="burgar-div">
             <div id="burger">
                 <span>&nbsp;</span>
@@ -69,6 +69,7 @@
         </div>
 
         <div class="about2">
+
             <img class="ooImg2" src="img/icon2.png" />
             <p class="ooP2">
                 Killen från Linköping läste en termin psykologi,<br> så akta dig för honom. Självdiagnoser är hans <br>specialitet!
@@ -78,18 +79,24 @@
                 problem sa Ola.
             </p>
 
+
         </div>
 
         <div class="about3">
-            <img class="ooImg3" src="img/icon3.png" />
+
+
+
             <p class="ooP3">
-                Inom programmering och webbdesign är <br> det väldigt viktigt att hänga med <br> i vad som är inne just nu.<br>                Trender ändras hela tiden, så att hänga med <br> är extremt viktigt för en programmerare.<br> Nedan visas
-                det hetaste
+                Inom programmering och webbdesign är <br> det väldigt viktigt att hänga med <br> i vad som är inne just nu.
+                <br> Trender ändras hela tiden, så att hänga med <br> är extremt viktigt för en programmerare.<br> Nedan
+                visas det hetaste
                 <br> och mest populära just nu!
             </p>
-
+            
+            <img class="ooImg3" src="img/icon3.png" />
         </div>
 
+        <!-- Här presenteras trender från GitHub -->
         <div id="trenddiv">
             <div id="jstrend">
                 <h3 class="trendh3"> Det här fokuserar vi på just nu inom Javascript</h3>
@@ -100,11 +107,12 @@
             </div>
         </div>
     </div>
-    
+
     <!-- Knappar till varje person -->
     <div class="btn-about">
         <button type="button" id="motTimmy" href="anchor2" onclick="bytSlide(this.id)">Läs mer om Timmy</button>
         <button type="button" id="motOla" href="anchor2" onclick="bytSlide(this.id)">Läs mer om Ola</button>
+        <button type="button" id="motAnchorOla" href="anchorOla">Läs mer om Ola</button>
     </div>
 
 
@@ -116,6 +124,8 @@
 
     <!-- Div som innehåller informationen om oss -->
     <div class="person">
+
+        <!-- Personsida för Timmy -->
         <div id="personSlide1" class="info-visible">
             <div class="timmysBild">
                 <img src="img/timmy.png" alt="" id="timmy">
@@ -133,20 +143,30 @@
                 </p>
                 <button type="button" id="motOla" class="btn-aboutOla" href="anchor2" onclick="bytSlide(this.id)">Läs mer om Ola</button>
             </div>
+
+            <!-- Progressbar för Timmy -->
             <div class="progressBars">
                 <p class="kunskap">Mina kunskaper</p>
-                <progress value="20" max="100" data-label="Klockan 20%"></progress><br>
-                <progress value="30" max="100" data-label="MS Paint 30%"></progress><br>
-                <progress value="80" max="100" data-label="Fickpingis 80%"></progress><br>
-                <progress value="4" max="100" data-label="Knyta skor 4%"></progress><br>
-                <progress value="100" max="100" data-label="Dricka kaffe 100%"></progress>
+                <progress value="20" max="100" data-label="CSS 20%"></progress><br>
+                <progress value="75" max="100" data-label="HTML 75%"></progress><br>
+                <progress value="80" max="100" data-label="SQL 80%"></progress><br>
+                <progress value="4" max="100" data-label="C# 4%"></progress><br>
+                <progress value="45" max="100" data-label="COBOL 45%"></progress>
             </div>
         </div>
 
+
+        <!-- Här börjar Olas sida -->
         <div id="personSlide2" class="info-hidden">
+
+
             <div class="olasBild">
+                <!-- Anchor till Ola -->
+                <div class="anchorPoint" id="anchorOla"></div>
                 <img src="img/cartman.jpg" alt="" id="ola">
             </div>
+
+
             <div class="personText">
                 <h1>Hej du!</h1>
                 <p>Det här är en sång om ingenting Så alla bratz kan hoppa omkring. E på klubben, dricker skumpa och alla brudar
@@ -161,18 +181,20 @@
                 <button type="button" class="btn-aboutTimmy" id="motTimmy" href="anchor2" onclick="bytSlide(this.id)">Läs mer om Timmy</button>
             </div>
 
+            <!-- Progressbar för Ola -->
             <div class="progressBars">
                 <p class="kunskap">Mina kunskaper</p>
-                <progress value="60" max="100" data-label="Klockan 60%"></progress><br>
-                <progress value="90" max="100" data-label="MS Paint 90%"></progress><br>
-                <progress value="30" max="100" data-label="Fickpingis 30%"></progress><br>
-                <progress value="5" max="100" data-label="Knyta skor 5%"></progress><br>
-                <progress value="100" max="100" data-label="Dricka kaffe 100%"></progress>
+                <progress value="90" max="100" data-label="CSS 90%"></progress><br>
+                <progress value="60" max="100" data-label="HTML 60%"></progress><br>
+                <progress value="30" max="100" data-label="SQL 30%"></progress><br>
+                <progress value="5" max="100" data-label="C# 5%"></progress><br>
+                <progress value="100" max="100" data-label="COBOL 100%"></progress>
             </div>
 
         </div>
 
     </div>
+
 
     <!-- Parallax för portfoliot -->
     <div class="bgimg4">
@@ -224,7 +246,6 @@
     </div>
 
     <!-- Google maps -->
-
     <h4 class="contactHead">Här finns vi:</h4>
     <div id="googleMap" class="google"></div>
     <hr>
