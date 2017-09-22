@@ -4,8 +4,9 @@
         height: 100%;
         padding: 0;
         margin: 0;
-        background-color:silver;
+        background-color: rgba(255, 106, 46, 0.34);
         font-size: 100%;
+        font-family: "Lato", sans-serif;
     }
     
 .open-menu{
@@ -37,10 +38,11 @@
     #burgar-div{
         position: fixed;
         width: 100%;
-        height: 10%;
+        height: 13%;
         z-index: 1000;
         background-color: #504A4A;
     }
+
 
     #burger{
        margin-left: 3%;
@@ -140,11 +142,12 @@
         min-height: 40%;
     }
 
-    /*Om grupp*/
-    .omGrupp{
-        margin: 2%;
-        font-family: 'Scope One', serif;
-        font-size: 1.2em;
+    img.ooImg1, img.ooImg2, img.ooImg3{
+        display: none;
+    }
+
+    .omGrupp-wrapper{
+        margin-left: 5%;
     }
 
     #jstrend {
@@ -159,6 +162,32 @@
 
     .trendh3 {
         text-decoration: underline;
+    }
+
+
+    .btn-about{
+        margin-top: 5%;
+        width: 100%;
+        height: 20%;
+        display: inline-block;
+    }
+    #motTimmy{
+        margin-left: 25%;
+        width: 25%;
+        height: 50%;
+    }
+
+    #motOla{
+        margin-left: 10%;
+        width: 20%;
+        height: 50%;
+    }
+
+    #motTimmy, #motOla, .btn-aboutOla, .btn-aboutTimmy{
+        background-color: white;
+        border: 2px solid steelblue;
+        font-family: "Lato", sans-serif;
+        border-radius: 8px;
     }
 
     
@@ -279,7 +308,7 @@
     .classContact, .mailen, .msg{
         align-items: center;
         margin-bottom: 1%;
-        margin-left: 25%;
+        margin-left: 10%;
     }
 
     .kontaktwrapper {
@@ -289,25 +318,26 @@
     .namn, .tlf{
         margin-top: 2%;
         height: 32px;
+        background-color: #EDEDED;
     }
     
     .namn{
-        width: 25%;
+        width: 45%;
     }
     
     .tlf{
-        width: 25%;
+        width: 45%;
     }
     
     .mail{
         margin-top: 1%;
         height: 32px;
-        width: 55%;
+        width: 93%;
         margin-bottom: 1%;
     }
     
     .contactMsg{
-        width: 55%;
+        width: 93%;
         height: 64px;
     }
     
@@ -318,18 +348,14 @@
     }
     
     #contactBtn{
-        height: 5%;
-        width: 14%;
+        height: 15%;
+        width: 35%;
         margin-left: 60%;
         border: 2px solid steelblue;
         font-family: "Lato", sans-serif;
         border-radius: 8px;
     }
     
-    #contactBtn:hover{
-        background-color: steelblue;
-        color: white;
-    }
     
     /* placering och storlek av GoogleMaps */
     .google{

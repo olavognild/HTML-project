@@ -29,7 +29,8 @@
             <ul class="hidden" id="div-lista">
                 <li class="li1"><a href="anchor1" id="link1">Gruppen</a></li>
                 <li class="li2"><a href="anchor2" id="link2">Om oss</a></li>
-                <li class="li3"><a href="anchor3" id="link3">Kontakt</a></li>
+                <li class="li3"><a href="anchor3" id="link3">Portfolio</a></li>
+                <li class="li4"><a href="anchor4" id="link4">Kontakt</a></li>
             </ul>
         </div>
 
@@ -41,7 +42,6 @@
                 <span>&nbsp;</span>
             </div>
         </div>
-
     </nav>
 
 
@@ -55,38 +55,40 @@
 
     <div class="anchorPoint" id="anchor1"></div>
 
-    <!-- Utfyllnad av text -->
- 
-    <h1 id="h1Rubrik">Om oss</h1>
-    <div class="about1">
-        <p class="ooP1">
-            Detta arbete kommer handla om hur man <br> på bästa sätt löser problem,<br> knackar kod, kompilerar koden för
-            att sedan <br>ladda upp ett schysst resultat.<br> En saftig blandning av den bästa <br> minigolfspelaren från
-            Linköping och den <br>snabbaste flugsvampätaren från Katrineholm! <br>Häng med!
-        </p>
-        <img class="ooImg1" src="img/icon1.png" />
-    </div>
 
-    <div class="about2">
-        <img class="ooImg2" src="img/icon2.png" />
-        <p class="ooP2">
-            Detta arbete kommer handla om hur man <br> på bästa sätt löser problem,<br> knackar kod, kompilerar koden för
-            att sedan <br>ladda upp ett schysst resultat.<br> En saftig blandning av den bästa <br> minigolfspelaren från
-            Linköping och den <br>snabbaste flugsvampätaren från Katrineholm! <br>Häng med!
-        </p>
-        
-    </div>
-
-    <div class="about3">
-            <img class="ooImg3" src="img/icon3.png" />
-            <p class="ooP3">
-                Detta arbete kommer handla om hur man <br> på bästa sätt löser problem,<br> knackar kod, kompilerar koden för
-                att sedan <br>ladda upp ett schysst resultat.<br> En saftig blandning av den bästa <br> minigolfspelaren från
-                Linköping och den <br>snabbaste flugsvampätaren från Katrineholm! <br>Häng med!
+    <!--Om gruppen -->
+    <div class="omGrupp-wrapper">
+        <h1 id="h1Rubrik">Om oss</h1>
+        <div class="about1">
+            <p class="ooP1">
+                Detta arbete kommer handla om hur man <br> på bästa sätt löser problem,<br> knackar kod, kompilerar koden
+                för att sedan <br>ladda upp ett schysst resultat.<br> En saftig blandning av den bästa <br> minigolfspelaren
+                från Linköping och den <br>snabbaste flugsvampätaren från Katrineholm! <br>Häng med!
             </p>
-            
+            <img class="ooImg1" src="img/icon1.png" />
         </div>
 
+        <div class="about2">
+            <img class="ooImg2" src="img/icon2.png" />
+            <p class="ooP2">
+                Killen från Linköping läste en termin psykologi,<br> så akta dig för honom. Självdiagnoser är hans <br>specialitet!
+                Ett riktigt snille som aldrig har <br> kuggat en enda tenta. SQL och datalogi är<br> något han gärna skryter
+                om.
+                <br> Ola däremot kuggade tentan i Java. Skräll.<br> En comeback kom dock då SCRUM<br> stog på schemat. Inga
+                problem sa Ola.
+            </p>
+
+        </div>
+
+        <div class="about3">
+            <img class="ooImg3" src="img/icon3.png" />
+            <p class="ooP3">
+                Inom programmering och webbdesign är <br> det väldigt viktigt att hänga med <br> i vad som är inne just nu.<br>                Trender ändras hela tiden, så att hänga med <br> är extremt viktigt för en programmerare.<br> Nedan visas
+                det hetaste
+                <br> och mest populära just nu!
+            </p>
+
+        </div>
 
         <div id="trenddiv">
             <div id="jstrend">
@@ -97,18 +99,24 @@
                 <h3 class="trendh3"> Det här fokuserar vi på just nu inom CSS</h3>
             </div>
         </div>
-
-
+    </div>
+    
+    <!-- Knappar till varje person -->
+    <div class="btn-about">
+        <button type="button" id="motTimmy" href="anchor2" onclick="bytSlide(this.id)">Läs mer om Timmy</button>
+        <button type="button" id="motOla" href="anchor2" onclick="bytSlide(this.id)">Läs mer om Ola</button>
     </div>
 
+
     <!-- Andra bakgrunden -->
-    <div class="bgimg2" id="anchor2"></div>
+    <div class="bgimg2"></div>
 
-
+    <!-- AnchorPoint för personsida -->
+    <div class="anchorPoint" id="anchor2"></div>
 
     <!-- Div som innehåller informationen om oss -->
     <div class="person">
-        <div id="personSlide1">
+        <div id="personSlide1" class="info-visible">
             <div class="timmysBild">
                 <img src="img/timmy.png" alt="" id="timmy">
             </div>
@@ -123,6 +131,7 @@
                     som ser ut som en normal mening. Lorem Ipsum genererad på denna sidan är därför alltid fri från repetitioner,
                     humorinslag, märkliga ordformationer osv.
                 </p>
+                <button type="button" id="motOla" class="btn-aboutOla" href="anchor2" onclick="bytSlide(this.id)">Läs mer om Ola</button>
             </div>
             <div class="progressBars">
                 <p class="kunskap">Mina kunskaper</p>
@@ -133,7 +142,8 @@
                 <progress value="100" max="100" data-label="Dricka kaffe 100%"></progress>
             </div>
         </div>
-        <div id="personSlide2" style="display:none;">
+
+        <div id="personSlide2" class="info-hidden">
             <div class="olasBild">
                 <img src="img/cartman.jpg" alt="" id="ola">
             </div>
@@ -148,23 +158,26 @@
                     kan hoppa omkring E på klubben dricker skumpa Och alla brudar tar på min rumpa Det här är en sång om
                     ingenting Så alla bratz kan hoppa omkring O i baren shotar vi jäger För att visa vem som äger
                 </p>
+                <button type="button" class="btn-aboutTimmy" id="motTimmy" href="anchor2" onclick="bytSlide(this.id)">Läs mer om Timmy</button>
             </div>
+
             <div class="progressBars">
-                <p>Mina kunskaper</p>
+                <p class="kunskap">Mina kunskaper</p>
                 <progress value="60" max="100" data-label="Klockan 60%"></progress><br>
                 <progress value="90" max="100" data-label="MS Paint 90%"></progress><br>
                 <progress value="30" max="100" data-label="Fickpingis 30%"></progress><br>
                 <progress value="5" max="100" data-label="Knyta skor 5%"></progress><br>
                 <progress value="100" max="100" data-label="Dricka kaffe 100%"></progress>
             </div>
+
         </div>
-        <!-- Knapparna för att byta mellan slides -->
-        <a id="left" onclick="bytSlide()">&#10094;</a>
-        <a id="right" onclick="bytSlide()">&#10095;</a>
+
     </div>
 
     <!-- Parallax för portfoliot -->
-    <div class="bgimg4" id="anchor4"></div>
+    <div class="bgimg4">
+        <div cass="anchorPoint" id="anchor3"></div>
+    </div>
 
     <div id="portfolio">
         <div id="portText">
@@ -182,7 +195,7 @@
     <!-- Parallax för kontakt -->
     <div class="bgimg3">
         <!-- AnchorPoint för contact -->
-        <div class="anchorPoint" id="anchor3"></div>
+        <div class="anchorPoint" id="anchor4"></div>
     </div>
 
     <!-- Här börjar kontaktdelen -->
@@ -195,21 +208,21 @@
 
     <!-- Textfält -->
     <div class="kontaktwrapper">
-    <div class="classContact" id="idContact">
-        <input type="text" class="namn" id="namn" placeholder="Namn" title="Ditt namn">
-        <input type="text" class="tlf" id="tlf" placeholder="Telefonnummer" title="Ditt telefonnummer">
+        <div class="classContact" id="idContact">
+            <input type="text" class="namn" id="namn" placeholder="Namn" title="Ditt namn">
+            <input type="text" class="tlf" id="tlf" placeholder="Telefonnummer" title="Ditt telefonnummer">
+        </div>
+
+        <div class="mailen">
+            <input type="text" class="mail" id="mail" placeholder="Mail" title="Din mailadress">
+        </div>
+        <div class="msg">
+            <textarea class="contactMsg" id="contactMsg" placeholder="Meddelande" title="Skriv ett meddelande" cols="45" rows="5"></textarea>
+        </div>
+
+        <button type="button" id="contactBtn">Skicka</button>
     </div>
 
-    <div class="mailen">
-        <input type="text" class="mail" id="mail" placeholder="Mail" title="Din mailadress">
-    </div>
-    <div class="msg">
-        <textarea class="contactMsg" id="contactMsg" placeholder="Meddelande" title="Skriv ett meddelande" cols="45" rows="5"></textarea>
-    </div>
-
-    <button type="button" id="contactBtn">Skicka</button>
-    </div>
-    
     <!-- Google maps -->
 
     <h4 class="contactHead">Här finns vi:</h4>

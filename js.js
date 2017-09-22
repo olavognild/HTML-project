@@ -9,14 +9,19 @@ $(document).scroll(function () {
 });
 
 
-function bytSlide() {
+
+function bytSlide(clickedId) {
     var slide1 = document.getElementById("personSlide1");
     var slide2 = document.getElementById("personSlide2");
 
-    slide1.style.display = (
-        slide1.style.display == "none" ? "block" : "none");
-    slide2.style.display = (
-        slide2.style.display == "none" ? "block" : "none");
+    if (clickedId === "motOla") {
+        $("#personSlide2").removeClass("info-hidden").addClass("info-visible");
+        $("#personSlide1").removeClass("info-visible").addClass("info-hidden");
+    }
+    else {
+        $("#personSlide1").removeClass("info-hidden").addClass("info-visible");
+        $("#personSlide2").removeClass("info-visible").addClass("info-hidden");
+    }
 }
 
 $(document).ready(function () {
@@ -34,7 +39,7 @@ $(document).ready(function () {
     })
 
     //Animation för scroll till anchorPoint2
-    $("#link2").click(function () {
+    $("#link2, #motTimmy, #motOla").click(function () {
         $path = $("#anchor2").offset().top;
         event.preventDefault();
         $('body').animate({ scrollTop: $path }, 1000);
@@ -47,11 +52,14 @@ $(document).ready(function () {
         $('body').animate({ scrollTop: $path }, 1000);
     })
 
-    var datum = new Date();
-    datum.setDate(datum.getDate()-7);
-    var tidigareDatum = datum.toISOString().slice(0,10);
+    //Animation för scroll till anchorPoint4
+    $("#link4").click(function () {
+        $path = $("#anchor4").offset().top;
+        event.preventDefault();
+        $('body').animate({ scrollTop: $path }, 1000);
+    })
 
-    fetch('https://api.github.com/search/repositories?q=language:javascript+created:>' + tidigareDatum + '&sort=stars&order=desc')
+    fetch('https://api.github.com/search/repositories?q=language:javascript+created:>2017-09-13&sort=stars&order=desc')
         .then(response => response.json())
         .then(data => {
             for (var i = 0; i < 5; i++) {
@@ -64,7 +72,7 @@ $(document).ready(function () {
             }
         });
 
-        fetch('https://api.github.com/search/repositories?q=language:css+created:>' + tidigareDatum + '&sort=stars&order=desc')
+    fetch('https://api.github.com/search/repositories?q=language:css+created:>2017-09-13&sort=stars&order=desc')
         .then(response => response.json())
         .then(data => {
             for (var i = 0; i < 5; i++) {
@@ -164,23 +172,6 @@ function validera(element, regex) {
         element.style.backgroundColor = "white";
     }
 }
-
-$(document).ready(function () {
-    $("#contactBtn").on("click", function () {
-
-        var namnTxt = document.getElementById("namn").value;
-        var tlfTxt = document.getElementById("tlf").value;
-        var mailTxt = document.getElementById("mail").value;
-        var msgTxt = document.getElementById("contactMsg").value;
-
-        var namnLength = namnTxt.length;
-        var tlfLength = tlfTxt.length;
-        var mailLength = mailTxt.length;
-        var msgLength = msgTxt.length;
-
-
-    });
-})
 
 vnamn.addEventListener("keyup", function () {
 
