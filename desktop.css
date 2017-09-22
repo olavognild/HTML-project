@@ -514,11 +514,19 @@
         color: white;
     }
 
-    .info-hidden, #motAnchorOla{
+    .info-hidden, #motAnchorOla, #JScontributors, #CSScontributors{
         display: none;
     }
     .info-visible {
         display: block;
     }
 
+    .avatarbilder {
+        height: 10%;
+        width: 10%;
     }
+
+    .trendText {
+        text-decoration: underline;
+    }
+}

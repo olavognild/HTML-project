@@ -381,7 +381,16 @@
         color: white;
     }
 
-    .btn-aboutOla, .btn-aboutTimmy, #motOla, #nästaknapp, #föregåendeknapp, div.logodiv, img.ooImg1, img.ooImg2, img.ooImg3{
+    .btn-aboutOla, .btn-aboutTimmy, #motOla, #nästaknapp, #föregåendeknapp, div.logodiv, img.ooImg1, img.ooImg2, img.ooImg3, #JScontributors, #CSScontributors{
         display: none;
+    }
+
+    .avatarbilder {
+        height: 20%;
+        width: 20%;
+    }
+
+    .trendText {
+        text-decoration: underline;
     }
 }

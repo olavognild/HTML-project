@@ -92,18 +92,24 @@
                 visas det hetaste
                 <br> och mest populära just nu!
             </p>
-            
+
             <img class="ooImg3" src="img/icon3.png" />
         </div>
 
         <!-- Här presenteras trender från GitHub -->
         <div id="trenddiv">
             <div id="jstrend">
-                <h3 class="trendh3"> Det här fokuserar vi på just nu inom Javascript</h3>
+                <h3 class="trendh3"> Det här fördjupar vi oss i just nu inom Javascript<button type="button" id="visaMerJS" onclick="visaMerJavascript()">Visa Mer!</button></h3>
+            </div>
+            <div id="JScontributors">
+                <p class="trendText">Dessa användare har bidragit till de trendande projekten</p>
             </div>
 
             <div id="csstrend">
-                <h3 class="trendh3"> Det här fokuserar vi på just nu inom CSS</h3>
+                <h3 class="trendh3"> Det här fördjupar vi oss i just nu inom CSS<button type="button" id="visaMerStyle" onclick="visaMerCSS()">Visa Mer!</button></h3>
+            </div>
+            <div id="CSScontributors">
+                <p class="trendText">Dessa användare har bidragit till de trendande projekten</p>
             </div>
         </div>
     </div>
@@ -242,7 +248,7 @@
             <textarea class="contactMsg" id="contactMsg" placeholder="Meddelande" title="Skriv ett meddelande" cols="45" rows="5"></textarea>
         </div>
 
-        <button type="button" id="contactBtn">Skicka</button>
+        <button type="button" id="contactBtn" onclick="sparaData()" ()>Skicka</button>
     </div>
 
     <!-- Google maps -->
