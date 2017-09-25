@@ -146,6 +146,12 @@
         display: block;
     }
 
+    .omGrupp-wrapper {
+        min-height: 100%;
+        position: relative;
+        overflow: hidden;
+    }
+
     .ooP1{
         margin-left: 14%;
         width: 30%;
@@ -229,6 +235,7 @@
     
     .trendh3 {
         text-decoration: underline;
+        margin-left: 1%;
     }
 
     a.motTimmy, .motOla, .btn-aboutOla, .btn-aboutTimmy{
@@ -260,11 +267,14 @@
         appearance: button;
         margin-left: 35%;
         transition-duration: 0.6s;
+        margin-bottom: 1%;
+        width: 15%;
     }
 
     .motOla{
         margin-left: 15%;
         transition-duration: 0.6s;
+        margin-bottom: 1%;
     }
     
     /*Persondiv*/
@@ -317,7 +327,7 @@
     
     /*Progressbar*/
     .progressBars {
-        padding-left: 5%;
+        padding-left: 3%;
         float: left;
         vertical-align: top;
     }
@@ -380,16 +390,12 @@
     
     h4{
         font-style: italic;
+        padding-bottom: 1%;
     }
     
     #h1Contact{
         padding-top: 2%;
     }
-    
-    h4{
-        padding-bottom: 1%;
-    }
-    
     
     /* Css för kontakta-oss */
     .classContact, .mailen, .msg{
@@ -588,11 +594,12 @@
     .trendText {
         text-decoration: underline;
         font-weight: bold;
+        margin-left: 1%;
     }
 
     #visaMerJS, #visaMerStyle {
         height: 5%;
-        width: 30%;
+        width: 125px;
         background-color: white;
         border: 2px solid steelblue;
         font-family: "Lato", sans-serif;

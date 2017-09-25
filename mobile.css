@@ -434,7 +434,7 @@
 
     #visaMerJS, #visaMerStyle {
         height: 15%;
-        width: 40%;
+        max-width: 40vw;
         margin-left: 55%;
         border: 2px solid steelblue;
         font-family: "Lato", sans-serif;
