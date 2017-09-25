@@ -4,8 +4,8 @@
 <head>
     <title>Grupp 28</title>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <!-- Anpassa bredd på sidan mot använd device-->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <!--css -->
     <link rel="stylesheet" href="desktop.css">
     <link rel="stylesheet" href="mobile.css">
@@ -47,7 +47,6 @@
     </nav>
 
 
-
     <!-- första bakgrunden -->
     <div class="bgimg1" id="home">
         <div class="välkomstTxt">
@@ -68,12 +67,12 @@
                 för att sedan <br>ladda upp ett schysst resultat.<br> En saftig blandning av den bästa <br> minigolfspelaren
                 från Linköping och den <br>snabbaste flugsvampätaren från Katrineholm! <br>Häng med!
             </p>
-            <img class="ooImg1" src="img/icon1.png" />
+            <img class="ooImg1" src="img/icon1.png" alt="" />
         </div>
 
         <!-- Del 2 -->
         <div class="about2">
-            <img class="ooImg2" src="img/icon2.png" />
+            <img class="ooImg2" src="img/icon2.png" alt="" />
             <p class="ooP2">
                 Killen från Linköping läste en termin psykologi,<br> så akta dig för honom. Självdiagnoser är hans <br>specialitet!
                 Ett riktigt snille som aldrig har <br> kuggat en enda tenta. SQL och datalogi är<br> något han gärna skryter
@@ -93,7 +92,7 @@
                 <br> och mest populära just nu!
             </p>
 
-            <img class="ooImg3" src="img/icon3.png" />
+            <img class="ooImg3" src="img/icon3.png" alt="" />
         </div>
 
         <!-- Här presenteras trender från GitHub -->
@@ -122,8 +121,8 @@
 
     <!-- Knappar till varje person -->
     <div class="btn-about">
-        <button type="button" id="motTimmy" href="anchor2" onclick="bytSlide(this.id)">Läs mer om Timmy</button>
-        <button type="button" id="motOla" href="anchor2" onclick="bytSlide(this.id)">Läs mer om Ola</button>
+        <a class="motTimmy" href="anchor2" onclick="bytSlide(this.id)">Läs mer om Timmy</a>
+        <button type="button" id="motOla" class="motOla" href="anchor2" onclick="bytSlide(this.id)">Läs mer om Ola</button>
         <!-- Knapp som bara visas i telefon -->
         <button type="button" id="motAnchorOla" href="anchorOla">Läs mer om Ola</button>
     </div>
@@ -154,7 +153,7 @@
                     som ser ut som en normal mening. Lorem Ipsum genererad på denna sidan är därför alltid fri från repetitioner,
                     humorinslag, märkliga ordformationer osv.
                 </p>
-                <button type="button" id="motOla" class="btn-aboutOla" href="anchor2" onclick="bytSlide(this.id)">Läs mer om Ola</button>
+                <button type="button" id="motola" class="btn-aboutOla motOla" href="anchor2" onclick="bytSlide(this.id)">Läs mer om Ola</button>
             </div>
 
             <!-- Progressbar för Timmy -->
@@ -190,7 +189,7 @@
                     kan hoppa omkring E på klubben dricker skumpa Och alla brudar tar på min rumpa Det här är en sång om
                     ingenting Så alla bratz kan hoppa omkring O i baren shotar vi jäger För att visa vem som äger
                 </p>
-                <button type="button" class="btn-aboutTimmy" id="motTimmy" href="anchor2" onclick="bytSlide(this.id)">Läs mer om Timmy</button>
+                <button type="button" class="btn-aboutTimmy motTimmy" href="anchor2" onclick="bytSlide(this.id)">Läs mer om Timmy</button>
             </div>
 
             <!-- Progressbar för Ola -->
@@ -208,27 +207,27 @@
 
     <!-- Parallax för portfoliot -->
     <div class="bgimg4">
-        <div cass="anchorPoint" id="anchor3"></div>
+        <div class="anchorPoint" id="anchor3"></div>
     </div>
 
     <div id="portfolio">
         <div id="portText">
             <h1>Våra projekt</h1>
-            <h3>Efter år av sammarbete har vi skapat väldigt mycket ihop. Allt mellan onlineforum, mediadelning och tillbehör till gaming
-                står på listan över vad vi har uppnått.
+            <h3>Efter år av sammarbete har vi skapat väldigt mycket ihop. Allt mellan onlineforum, mediadelning och tillbehör
+                till gaming står på listan över vad vi har uppnått.
             </h3>
         </div>
 
         <div class="wrapper-portfolio">
             <div class="first-project">
-                <p><span id="span-project">Facebook</span> är med över 2 miljarder aktiva användare vår största bedrift (hitils!)</p>
+                <p><span class="span-project">Facebook</span> är med över 2 miljarder aktiva användare vår största bedrift (hitils!)</p>
                 <a target="_blank" href="https://facebook.com/">
                 <img class="img-facebook img-border-radius" src="img/facebook.jpg" alt="">
             </a>
             </div>
 
             <div class="second-project">
-                <p><span id="span-project">Instagram</span> är ännu ett mycket lyckat projekt. År 2012 sålde vi Instagram för
+                <p><span class="span-project">Instagram</span> är ännu ett mycket lyckat projekt. År 2012 sålde vi Instagram för
                     1 miljard dollar!</p>
                 <a target="_blank" href="https://www.instagram.com/instagram/">
                 <img class="img-instagram img-border-radius" src="img/instagram.jpg" alt="">
@@ -236,7 +235,7 @@
             </div>
 
             <div class="third-project">
-                <p><span id="span-project">Youtube</span> är idag ledande inom filmklipp på nätet. Denna sajt rankas 2:a på
+                <p><span class="span-project">Youtube</span> är idag ledande inom filmklipp på nätet. Denna sajt rankas 2:a på
                     Alexa-rankingen
                 </p>
                 <a target="_blank" href="https://youtube.com/">
@@ -247,7 +246,7 @@
 
         <div class="wrapper-portfolio">
             <div class="first-project">
-                <p><span id="span-project">Reddit</span> är idag ett av världens största forum med sina 542 miljoner användare
+                <p><span class="span-project">Reddit</span> är idag ett av världens största forum med sina 542 miljoner användare
                     i månaden</p>
                 <a target="_blank" href="https://reddit.com/">
                     <img class="img-reddit img-border-radius" src="img/reddit.png" alt="">
@@ -255,7 +254,7 @@
             </div>
 
             <div class="second-project">
-                <p>År 2000 lanserades vårt projekt <span id="span-project">Lunarstorm</span>. 8 år senare hade sajten en halv
+                <p>År 2000 lanserades vårt projekt <span class="span-project">Lunarstorm</span>. 8 år senare hade sajten en halv
                     miljon (!) unika besökare</p>
                 <a target="_blank" href="https://sv.wikipedia.org/wiki/Lunarstorm">
                     <img class="img-lunarstorm img-border-radius" src="img/lunarstorm.jpg" alt="">
@@ -263,7 +262,7 @@
             </div>
 
             <div class="third-project">
-                <p>Vid sidan av all programmering driver vi även en liten verksamhet vid namn <span id="span-project">Steelseries</span>.
+                <p>Vid sidan av all programmering driver vi även en liten verksamhet vid namn <span class="span-project">Steelseries</span>.
                     Verksamheten tillverkar i första hand gamingtillbehör.
                     <a target="_blank" href="https://steelseries.com/">
                     <img class="img-steelseries img-border-radius" src="img/steelseries.png" alt="">
@@ -271,7 +270,9 @@
             </div>
         </div>
 
-        <img id="slideshow" src="img/port1.jpg" alt="">
+        <div class="slideshow-div">
+            <img id="slideshow" src="img/pic1.jpg" alt="">
+        </div>
         <div class="portKnapp">
             <input type="button" value="Stoppa" id="startstopp" />
             <a id="nästaknapp">&#10095;</a>

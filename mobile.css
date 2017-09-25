@@ -9,22 +9,22 @@
         font-family: "Lato", sans-serif;
     }
     
-.open-menu{
-    position: fixed;
-    width: 100%; 
-    height: 50%;
-    background-color: #504A4A;
-    z-index: 998;
-    align-items: center;
-    transition: all .4s;
-}
+    .open-menu{
+        position: fixed;
+        width: 100%; 
+        height: 50%;
+        background-color: #504A4A;
+        z-index: 998;
+        align-items: center;
+        transition: all .4s;
+    }
 
-.hidden{
-    display: none;
-    transition: all .4s;
-}
+    .hidden{
+        display: none;
+        transition: all .4s;
+    }
 
-.open-list{
+    .open-list{
         display: inline-block;
         position: fixed;
         z-index: 999;
@@ -337,15 +337,53 @@
         margin-bottom: 5%;
         border-radius: 10px;
     }
-    
+
     /*portfolio div*/
     #portfolio{
-        margin: auto;
         width: 100%;
-        min-height: 100%;
+        margin-bottom: 5%;
+        margin: auto;
         overflow: hidden;
+        min-height: 100%;
     }
-    
+
+    .first-project, .second-project, .third-project{
+        margin-left: 10%;
+        height: 100%;
+        width: 40%;
+        float: left;
+    }
+
+    .span-project{
+        font-weight: bold;
+    }
+
+
+    .img-facebook, .img-reddit, .img-steelseries{
+        height: 70%;
+        width: 100%;
+    }
+
+    .img-instagram{
+        height: 20%;
+        width: 90%;
+    }
+
+    .img-youtube{
+        height: 50%;
+        width: 100%;
+    }
+
+    .img-lunarstorm{
+        height: 70%;
+        width: 80%;
+    }
+
+    .img-border-radius{
+        border-radius: 8px;
+        box-shadow: 2px -2px 100px rgba(0, 0, 0, 0.21);
+    }
+
     /*Själva storleken på bilderna*/
     #slideshow{
         width: 75%;
@@ -366,7 +404,6 @@
         align-items: center;
         justify-content: center;
     }
-    
     
     #startstopp {
         font-size: 20px;

@@ -12,7 +12,7 @@ function bytSlide(clickedId) {
     var slide1 = document.getElementById("personSlide1");
     var slide2 = document.getElementById("personSlide2");
 
-    if (clickedId === "motOla") {
+    if (clickedId === "motOla" || clickedId === "motola") {
         $("#personSlide2").removeClass("info-hidden").addClass("info-visible");
         $("#personSlide1").removeClass("info-visible").addClass("info-hidden");
     }
@@ -37,7 +37,7 @@ $(document).ready(function () {
     })
 
     //Animation för scroll till anchorPoint2
-    $("#link2, #motTimmy, #motOla").click(function () {
+    $("#link2, .motTimmy, .motOla").click(function () {
         $path = $("#anchor2").offset().top;
         event.preventDefault();
         $('body').animate({ scrollTop: $path }, 1000);
@@ -136,7 +136,7 @@ function visaMerCSS() {
 
 
 //Bildspel
-var images = ["img/port1.jpg", "img/port2.png", "img/port3.png"];
+var images = ["img/pic1.jpg", "img/pic2.jpg", "img/pic3.jpg"];
 var imageNumber = 0;
 var imageLength = images.length - 1;
 
@@ -166,7 +166,6 @@ document.getElementById("föregåendeknapp").addEventListener("click", lastImage
 
 //Gör att bildspelet rullar på/stannar
 var stopp = false;
-
 var intervalHandle = setInterval(changeImage, 1000);
 
 function bildTimer() {
@@ -174,6 +173,7 @@ function bildTimer() {
         clearInterval(intervalHandle);
         stopp = true;
     } else {
+
         intervalHandle = setInterval(changeImage, 1000);
         stopp = false;
     }
