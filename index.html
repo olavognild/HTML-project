@@ -98,18 +98,24 @@
 
         <!-- Här presenteras trender från GitHub -->
         <div id="trenddiv">
-            <div id="jstrend">
-                <h3 class="trendh3"> Det här fördjupar vi oss i just nu inom Javascript<button type="button" id="visaMerJS" onclick="visaMerJavascript()">Visa Mer!</button></h3>
+            <div id="first-wrapper">
+                <div id="jstrend">
+                    <h3 class="trendh3"> Det här fördjupar vi oss i just nu inom Javascript <br>
+                        <input type="button" value="Visa Contributors!" id="visaMerJS" /></h3>
+                </div>
+                <div id="csstrend">
+                    <h3 class="trendh3"> Det här fördjupar vi oss i just nu inom CSS <br>
+                        <input type="button" value="Visa Contributors!" id="visaMerStyle" /></h3>
+                </div>
             </div>
-            <div id="JScontributors">
-                <p class="trendText">Dessa användare har bidragit till de trendande projekten</p>
-            </div>
+            <div id="second-wrapper">
+                <div id="JScontributors">
+                    <p class="trendText">Dessa användare har bidragit till de trendande Javascript-projekten</p>
+                </div>
 
-            <div id="csstrend">
-                <h3 class="trendh3"> Det här fördjupar vi oss i just nu inom CSS<button type="button" id="visaMerStyle" onclick="visaMerCSS()">Visa Mer!</button></h3>
-            </div>
-            <div id="CSScontributors">
-                <p class="trendText">Dessa användare har bidragit till de trendande projekten</p>
+                <div id="CSScontributors">
+                    <p class="trendText">Dessa användare har bidragit till de trendande CSS-projekten</p>
+                </div>
             </div>
         </div>
     </div>
@@ -214,7 +220,7 @@
         </div>
         <img id="slideshow" src="img/port1.jpg" alt="">
         <div class="portKnapp">
-            <input onclick="bytText()" type="button" value="Stoppa" id="startstopp" />
+            <input type="button" value="Stoppa" id="startstopp" />
             <a id="nästaknapp">&#10095;</a>
             <a id="föregåendeknapp">&#10094;</a>
         </div>
@@ -248,7 +254,7 @@
             <textarea class="contactMsg" id="contactMsg" placeholder="Meddelande" title="Skriv ett meddelande" cols="45" rows="5"></textarea>
         </div>
 
-        <button type="button" id="contactBtn" onclick="sparaData()" ()>Skicka</button>
+        <button type="button" id="contactBtn">Skicka</button>
     </div>
 
     <!-- Google maps -->

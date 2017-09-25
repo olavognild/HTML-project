@@ -8,8 +8,6 @@ $(document).scroll(function () {
     }
 });
 
-
-
 function bytSlide(clickedId) {
     var slide1 = document.getElementById("personSlide1");
     var slide2 = document.getElementById("personSlide2");
@@ -68,20 +66,20 @@ $(document).ready(function () {
         .then(data => {
             for (var i = 0; i < 5; i++) {
                 var item = data.items[i];
-                var linknamn = data.items[i].html_url;
-                var projektnamn = data.items[i].name;
-                var linkägare = data.items[i].owner.html_url;
-                var anvnamn = data.items[i].owner.login;
-                var stjarnor = data.items[i].stargazers_count;
-                var collnamn = data.items[i].contributors_url;
+                var linknamn = item.html_url;
+                var projektnamn = item.name;
+                var linkägare = item.owner.html_url;
+                var anvnamn = item.owner.login;
+                var stjarnor = item.stargazers_count;
+                var collnamn = item.contributors_url;
                 $('#jstrend').append(" - Namn: " + "<a target=" + "'_blank'" + "href='" + linknamn + "'>" + "<strong>" + projektnamn + "</strong>" + "</a>" + " | Ägare: " + "<a target=" + "'_blank'" + "href='" + linkägare + "'>" + "<strong>" + anvnamn + "</strong>" + "</a>" + " | Stjärnor: " + stjarnor + "<br>");
                 fetch(collnamn)
                     .then(response => response.json())
                     .then(data => {
                         for (var z = 0; z < data.length; z++) {
                             var objekt = data[z];
-                            var contribnamn = data[z].login;
-                            var contribavatar = data[z].avatar_url;
+                            var contribnamn = objekt.login;
+                            var contribavatar = objekt.avatar_url;
                             $('#JScontributors').append("Contributor: " + contribnamn + "<br> <img src='" + contribavatar + "' alt='avatarbild' class='avatarbilder'><br>");
                         }
                     })
@@ -94,29 +92,30 @@ $(document).ready(function () {
         .then(data => {
             for (var i = 0; i < 5; i++) {
                 var item = data.items[i];
-                var linknamn = data.items[i].html_url;
-                var projektnamn = data.items[i].name;
-                var linkägare = data.items[i].owner.html_url;
-                var anvnamn = data.items[i].owner.login;
-                var stjarnor = data.items[i].stargazers_count;
-                var collnamn = data.items[i].contributors_url;
+                var linknamn = item.html_url;
+                var projektnamn = item.name;
+                var linkägare = item.owner.html_url;
+                var anvnamn = item.owner.login;
+                var stjarnor = item.stargazers_count;
+                var collnamn = item.contributors_url;
                 $('#csstrend').append(" - Namn: " + "<a target=" + "'_blank'" + "href='" + linknamn + "'>" + "<strong>" + projektnamn + "</strong>" + "</a>" + " | Ägare: " + "<a target=" + "'_blank'" + "href='" + linkägare + "'>" + "<strong>" + anvnamn + "</strong>" + "</a>" + " | Stjärnor: " + stjarnor + "<br>");
                 fetch(collnamn)
                     .then(response => response.json())
                     .then(data => {
                         for (var z = 0; z < data.length; z++) {
                             var objekt = data[z];
-                            var contribnamn = data[z].login;
-                            var contribavatar = data[z].avatar_url;
+                            var contribnamn = objekt.login;
+                            var contribavatar = objekt.avatar_url;
                             $('#CSScontributors').append("Contributor: " + contribnamn + "<br> <img src='" + contribavatar + "' alt='avatarbild' class='avatarbilder'><br>");
                         }
                     })
             }
         })
     });
-    
 
+document.getElementById("visaMerJS").addEventListener("click", visaMerJavascript);
 function visaMerJavascript() {
+    var contribJS = document.getElementById("visaMerJS");
     var divJS = document.getElementById("JScontributors");
     if (divJS.style.display === "block") {
         divJS.style.display = "none";
@@ -125,6 +124,7 @@ function visaMerJavascript() {
     }
 }
 
+document.getElementById("visaMerStyle").addEventListener("click", visaMerCSS);
 function visaMerCSS() {
     var divCSS = document.getElementById("CSScontributors");
     if (divCSS.style.display === "block") {
@@ -180,12 +180,36 @@ function bildTimer() {
 }
 
 document.getElementById("startstopp").addEventListener("click", bildTimer);
+document.getElementById("startstopp").addEventListener("click", bytTextBildspel)
 
 //Byter text på knapp beroende på om bildspelet rullar eller inte
-function bytText() {
+function bytTextBildspel() {
     var startstoppen = document.getElementById("startstopp");
-    if (startstoppen.value == "Stoppa") startstoppen.value = "Starta";
-    else startstoppen.value = "Stoppa";
+    if (startstoppen.value == "Stoppa") {
+        startstoppen.value = "Starta";
+    } else {
+        startstoppen.value = "Stoppa";
+    }
+}
+document.getElementById("visaMerJS").addEventListener("click", bytTextJS);
+
+function bytTextJS() {
+    var JScontrib = document.getElementById("visaMerJS");
+    if (JScontrib.value == "Visa Contributors!") {
+        JScontrib.value = "Stäng Ruta";
+    } else {
+        JScontrib.value = "Visa Contributors!";
+    }
+}
+
+document.getElementById("visaMerStyle").addEventListener("click", bytTextCSS)
+function bytTextCSS() {
+    var CSScontrib = document.getElementById("visaMerStyle");
+    if (CSScontrib.value == "Visa Contributors!") {
+        CSScontrib.value = "Stäng Ruta";
+    } else {
+        CSScontrib.value = "Visa Contributors!";
+    }
 }
 
 function googleMaps() {
@@ -265,6 +289,7 @@ $(document).ready(function () {
     });
 });
 
+document.getElementById("contactBtn").addEventListener("click", sparaData)
 function sparaData() {
     var namnet = document.getElementById("namn");
     var namnfärg = namnet.style.backgroundColor;
@@ -279,7 +304,7 @@ function sparaData() {
         telefon: document.getElementById("tlf").value,
         mail: document.getElementById("mail").value
     }
-    if (namnfärg === "green" || "white" && telefonfärg === "green" || "white" && mailfärg === "green" || "white" && meddelandefärg === "green") {
+    if ((namnfärg === "green" || "white") && (telefonfärg === "green" || "white") && (mailfärg === "green" || "white") && meddelandefärg === "green") {
         alert("Skickat!");
         window.localStorage.setItem("data", JSON.stringify(sparadeDatan));
     } else {

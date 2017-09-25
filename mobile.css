@@ -392,5 +392,15 @@
 
     .trendText {
         text-decoration: underline;
+        font-weight: bold;
+    }
+
+    #visaMerJS, #visaMerStyle {
+        height: 15%;
+        width: 40%;
+        margin-left: 55%;
+        border: 2px solid steelblue;
+        font-family: "Lato", sans-serif;
+        border-radius: 8px;
     }
 }
