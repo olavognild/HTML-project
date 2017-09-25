@@ -25,6 +25,8 @@
         <div class="logodiv">
             <p class="plogo"><a href="bome" id="linkHome">Grupp <br> 28</a></p>
         </div>
+
+        <!-- Själva menyn -->
         <div class="hidden" id="div-menu">
             <ul class="hidden" id="div-lista">
                 <li class="li1"><a href="anchor1" id="link1">Gruppen</a></li>
@@ -59,6 +61,7 @@
     <!--Om gruppen -->
     <div class="omGrupp-wrapper">
         <h1 id="h1Rubrik">Om oss</h1>
+        <!-- Del 1 -->
         <div class="about1">
             <p class="ooP1">
                 Detta arbete kommer handla om hur man <br> på bästa sätt löser problem,<br> knackar kod, kompilerar koden
@@ -68,8 +71,8 @@
             <img class="ooImg1" src="img/icon1.png" />
         </div>
 
+        <!-- Del 2 -->
         <div class="about2">
-
             <img class="ooImg2" src="img/icon2.png" />
             <p class="ooP2">
                 Killen från Linköping läste en termin psykologi,<br> så akta dig för honom. Självdiagnoser är hans <br>specialitet!
@@ -78,14 +81,11 @@
                 <br> Ola däremot kuggade tentan i Java. Skräll.<br> En comeback kom dock då SCRUM<br> stog på schemat. Inga
                 problem sa Ola.
             </p>
-
-
         </div>
 
+
+        <!-- Del 3 -->
         <div class="about3">
-
-
-
             <p class="ooP3">
                 Inom programmering och webbdesign är <br> det väldigt viktigt att hänga med <br> i vad som är inne just nu.
                 <br> Trender ändras hela tiden, så att hänga med <br> är extremt viktigt för en programmerare.<br> Nedan
@@ -124,6 +124,7 @@
     <div class="btn-about">
         <button type="button" id="motTimmy" href="anchor2" onclick="bytSlide(this.id)">Läs mer om Timmy</button>
         <button type="button" id="motOla" href="anchor2" onclick="bytSlide(this.id)">Läs mer om Ola</button>
+        <!-- Knapp som bara visas i telefon -->
         <button type="button" id="motAnchorOla" href="anchorOla">Läs mer om Ola</button>
     </div>
 
@@ -171,7 +172,6 @@
         <!-- Här börjar Olas sida -->
         <div id="personSlide2" class="info-hidden">
 
-
             <div class="olasBild">
                 <!-- Anchor till Ola -->
                 <div class="anchorPoint" id="anchorOla"></div>
@@ -202,9 +202,7 @@
                 <progress value="5" max="100" data-label="C# 5%"></progress><br>
                 <progress value="100" max="100" data-label="COBOL 100%"></progress>
             </div>
-
         </div>
-
     </div>
 
 
@@ -216,8 +214,63 @@
     <div id="portfolio">
         <div id="portText">
             <h1>Våra projekt</h1>
-            <p>Här kommer bilder från några av projekten vi jobbat på under tidigare år</p>
+            <h3>Efter år av sammarbete har vi skapat väldigt mycket ihop. Allt mellan onlineforum, mediadelning och tillbehör till gaming
+                står på listan över vad vi har uppnått.
+            </h3>
         </div>
+
+        <div class="wrapper-portfolio">
+            <div class="first-project">
+                <p><span id="span-project">Facebook</span> är med över 2 miljarder aktiva användare vår största bedrift (hitils!)</p>
+                <a target="_blank" href="https://facebook.com/">
+                <img class="img-facebook img-border-radius" src="img/facebook.jpg" alt="">
+            </a>
+            </div>
+
+            <div class="second-project">
+                <p><span id="span-project">Instagram</span> är ännu ett mycket lyckat projekt. År 2012 sålde vi Instagram för
+                    1 miljard dollar!</p>
+                <a target="_blank" href="https://www.instagram.com/instagram/">
+                <img class="img-instagram img-border-radius" src="img/instagram.jpg" alt="">
+            </a>
+            </div>
+
+            <div class="third-project">
+                <p><span id="span-project">Youtube</span> är idag ledande inom filmklipp på nätet. Denna sajt rankas 2:a på
+                    Alexa-rankingen
+                </p>
+                <a target="_blank" href="https://youtube.com/">
+                <img class="img-youtube img-border-radius" src="img/youtube.jpg" alt="">
+            </a>
+            </div>
+        </div>
+
+        <div class="wrapper-portfolio">
+            <div class="first-project">
+                <p><span id="span-project">Reddit</span> är idag ett av världens största forum med sina 542 miljoner användare
+                    i månaden</p>
+                <a target="_blank" href="https://reddit.com/">
+                    <img class="img-reddit img-border-radius" src="img/reddit.png" alt="">
+                </a>
+            </div>
+
+            <div class="second-project">
+                <p>År 2000 lanserades vårt projekt <span id="span-project">Lunarstorm</span>. 8 år senare hade sajten en halv
+                    miljon (!) unika besökare</p>
+                <a target="_blank" href="https://sv.wikipedia.org/wiki/Lunarstorm">
+                    <img class="img-lunarstorm img-border-radius" src="img/lunarstorm.jpg" alt="">
+                </a>
+            </div>
+
+            <div class="third-project">
+                <p>Vid sidan av all programmering driver vi även en liten verksamhet vid namn <span id="span-project">Steelseries</span>.
+                    Verksamheten tillverkar i första hand gamingtillbehör.
+                    <a target="_blank" href="https://steelseries.com/">
+                    <img class="img-steelseries img-border-radius" src="img/steelseries.png" alt="">
+                </a>
+            </div>
+        </div>
+
         <img id="slideshow" src="img/port1.jpg" alt="">
         <div class="portKnapp">
             <input type="button" value="Stoppa" id="startstopp" />
