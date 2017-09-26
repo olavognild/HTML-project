@@ -8,20 +8,30 @@ $(document).scroll(function () {
     }
 });
 
-// Byta mellan Timmy och Ola
-function bytSlide(clickedId) {
-    var slide1 = document.getElementById("personSlide1");
-    var slide2 = document.getElementById("personSlide2");
+//Hamburgarmeny
+$(document).ready(function () {
+    $("#burgar-div").on('click', function () {
+        $(this).toggleClass("open");
+    });
+});
 
-    if (clickedId === "motOla" || clickedId === "motola") {
-        $("#personSlide2").removeClass("info-hidden").addClass("info-visible");
-        $("#personSlide1").removeClass("info-visible").addClass("info-hidden");
-    }
-    else {
-        $("#personSlide1").removeClass("info-hidden").addClass("info-visible");
-        $("#personSlide2").removeClass("info-visible").addClass("info-hidden");
-    }
-}
+
+$(document).ready(function () {
+    //Funktion för burgardiven
+    $("#burgar-div").on("click", function () {
+
+        var currentClass = $("#burgar-div").attr("class");
+
+        if (currentClass === "open") {
+            $("#div-menu").removeClass("hidden").addClass("open-menu");
+            $("#div-lista").removeClass("hidden").addClass("open-list");
+        } else {
+            $("#div-menu").removeClass("open-menu").addClass("hidden");
+            $("#div-lista").removeClass("open-list").addClass("hidden");
+        }
+    });
+});
+
 
 $(document).ready(function () {
     //Animation för scroll till toppen av sidan
@@ -40,6 +50,13 @@ $(document).ready(function () {
     //Animation för scroll till anchorPoint2
     $("#link2, .motTimmy, .motOla").click(function () {
         $path = $("#anchor2").offset().top;
+        event.preventDefault();
+        $('body').animate({ scrollTop: $path }, 1000);
+    })
+
+    //Animation för scroll till Olas sida i telefonen
+    $("#motAnchorOla").click(function () {
+        $path = $("#anchorOla").offset().top;
         event.preventDefault();
         $('body').animate({ scrollTop: $path }, 1000);
     })
@@ -142,6 +159,20 @@ function visaMerCSS() {
     }
 }
 
+// Byta mellan Timmy och Ola
+function bytSlide(clickedId) {
+    var slide1 = document.getElementById("personSlide1");
+    var slide2 = document.getElementById("personSlide2");
+
+    if (clickedId === "motOla" || clickedId === "motola") {
+        $("#personSlide2").removeClass("info-hidden").addClass("info-visible");
+        $("#personSlide1").removeClass("info-visible").addClass("info-hidden");
+    }
+    else {
+        $("#personSlide1").removeClass("info-hidden").addClass("info-visible");
+        $("#personSlide2").removeClass("info-visible").addClass("info-hidden");
+    }
+}
 
 //Bildspel
 var images = ["img/pic1.jpg", "img/pic2.jpg", "img/pic3.jpg"];
@@ -277,48 +308,19 @@ vMsg.addEventListener("keyup", function () {
 })
 
 
-//Hamburgarmeny
-$(document).ready(function () {
-    $("#burgar-div").on('click', function () {
-        $(this).toggleClass("open");
-    });
-});
-
-
-$(document).ready(function () {
-    //Funktion för burgardiven
-    $("#burgar-div").on("click", function () {
-
-        var currentClass = $("#burgar-div").attr("class");
-
-        if (currentClass === "open") {
-            $("#div-menu").removeClass("hidden").addClass("open-menu");
-            $("#div-lista").removeClass("hidden").addClass("open-list");
-        } else {
-            $("#div-menu").removeClass("open-menu").addClass("hidden");
-            $("#div-lista").removeClass("open-list").addClass("hidden");
-        }
-        
-    });
-});
-
 //Beroende på valideringen ska det antingen skickas eller visa att det inte fungerar. Sparar även data.
 document.getElementById("contactBtn").addEventListener("click", sparaData)
 function sparaData() {
-    var namnet = document.getElementById("namn");
-    var namnfärg = namnet.style.backgroundColor;
-    var mailen = document.getElementById("mail");
-    var mailfärg = mailen.style.backgroundColor;
-    var telefonen = document.getElementById("tlf");
-    var telefonfärg = telefonen.style.backgroundColor;
-    var meddelande = document.getElementById("contactMsg");
-    var meddelandefärg = meddelande.style.backgroundColor;
+    var namnColor = vnamn.style.backgroundColor;
+    var mailColor = vMail.style.backgroundColor;
+    var telefonColor = vTlf.style.backgroundColor;
+    var msgColor = vMsg.style.backgroundColor;
     var sparadeDatan = {
         namn: document.getElementById("namn").value,
         telefon: document.getElementById("tlf").value,
         mail: document.getElementById("mail").value
     }
-    if ((namnfärg === "green" || "white") && (telefonfärg === "green" || "white") && (mailfärg === "green" || "white") && meddelandefärg === "green") {
+    if ((namnColor === "green" || "white") && (telefonColor === "green" || "white") && (mailColor === "green" || "white") && msgColor === "green") {
         alert("Skickat!");
         window.localStorage.setItem("data", JSON.stringify(sparadeDatan));
     } else {
@@ -327,6 +329,6 @@ function sparaData() {
 }
 var lagradData = JSON.parse(window.localStorage.getItem("data"));
 
-document.getElementById("namn").value = lagradData.namn;
-document.getElementById("tlf").value = lagradData.telefon;
-document.getElementById("mail").value = lagradData.mail;
+vnamn.value = lagradData.namn;
+vTlf.value = lagradData.telefon;
+vMail.value = lagradData.mail;

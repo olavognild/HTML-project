@@ -64,8 +64,8 @@
         <div class="about1">
             <p class="ooP1">
                 Detta arbete kommer handla om hur man <br> på bästa sätt löser problem,<br> knackar kod, kompilerar koden
-                för att sedan <br>ladda upp ett schysst resultat.<br> En saftig blandning av den bästa <br> minigolfspelaren
-                från Linköping och den <br>snabbaste flugsvampätaren från Katrineholm! <br>Häng med!
+                för att sedan <br>ladda upp ett schysst resultat.<br> Vi har tre terminer på det <br>systemvetenskapliga programmet
+                i ryggen där vi<br> har lärt oss ett och annat om programmering. <br>Häng med!
             </p>
             <img class="ooImg1" src="img/icon1.png" alt="Bild på blomma" />
         </div>
@@ -74,11 +74,9 @@
         <div class="about2">
             <img class="ooImg2" src="img/icon2.png" alt="Bild på pokémon" />
             <p class="ooP2">
-                Killen från Linköping läste en termin psykologi,<br> så akta dig för honom. Självdiagnoser är hans <br>specialitet!
-                Ett riktigt snille som aldrig har <br> kuggat en enda tenta. SQL och datalogi är<br> något han gärna skryter
-                om.
-                <br> Ola däremot kuggade tentan i Java. Skräll.<br> En comeback kom dock då SCRUM<br> stog på schemat. Inga
-                problem sa Ola.
+                Att integrera med ett system vet vi är extremt <br>viktigt för kunden och det har vi lagt stor vikt på<br>
+                under detta arbete. <br> Vi fokuserar mycket på en enkel layout och och hur väl<br> en kund integrerar med det för att<br>
+                skapa maximal användbarhet.
             </p>
         </div>
 
@@ -120,9 +118,9 @@
         <!-- Knappar till varje person -->
         <div class="btn-about">
             <a class="motTimmy" href="anchor2" onclick="bytSlide(this.id)">Läs mer om Timmy</a>
-            <button type="button" id="motOla" class="motOla" href="anchor2" onclick="bytSlide(this.id)">Läs mer om Ola</button>
+            <a id="motOla" class="motOla" href="anchor2" onclick="bytSlide(this.id)">Läs mer om Ola</a>
             <!-- Knapp som bara visas i telefon -->
-            <button type="button" id="motAnchorOla" href="anchorOla">Läs mer om Ola</button>
+            <a id="motAnchorOla" href="anchorOla">Läs mer om Ola </a>
         </div>
     </div>
 
@@ -151,8 +149,7 @@
                     som ser ut som en normal mening. Lorem Ipsum genererad på denna sidan är därför alltid fri från repetitioner,
                     humorinslag, märkliga ordformationer osv.
                 </p>
-                <button type="button" id="motola" class="btn-aboutOla motOla" href="anchor2" onclick="bytSlide(this.id)">Läs mer om Ola</button>
-            </div>
+                <a id="motola" class="btn-aboutOla motOla" href="anchor2" onclick="bytSlide(this.id)">Läs mer om Ola</a>            </div>
 
             <!-- Progressbar för Timmy -->
             <div class="progressBars">
@@ -187,7 +184,7 @@
                     kan hoppa omkring E på klubben dricker skumpa Och alla brudar tar på min rumpa Det här är en sång om
                     ingenting Så alla bratz kan hoppa omkring O i baren shotar vi jäger För att visa vem som äger
                 </p>
-                <button type="button" class="btn-aboutTimmy motTimmy" href="anchor2" onclick="bytSlide(this.id)">Läs mer om Timmy</button>
+                <a class="btn-aboutTimmy motTimmy" href="anchor2" onclick="bytSlide(this.id)">Läs mer om Timmy</a>
             </div>
 
             <!-- Progressbar för Ola -->
@@ -271,6 +268,8 @@
             </div>
         </div>
 
+        <!-- Slideshow med bildspel -->
+        <h3 class="h3-mitten">Här är bilder från när åkte på en inspirationsresa</h3>
         <div class="slideshow-div">
             <img id="slideshow" src="img/pic1.jpg" alt="Bilder för slideshow">
         </div>
