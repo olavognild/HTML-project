@@ -35,6 +35,7 @@
         transition: all .4s;
     }
 
+    /* Navicondiv */
     #burgar-div{
         position: fixed;
         width: 100%;
@@ -43,7 +44,7 @@
         background-color: #504A4A;
     }
 
-
+    /* Naviconposition */
     #burger{
        margin-left: 3%;
        margin-top: 3%;
@@ -143,21 +144,24 @@
         margin-left: 5%;
     }
 
+    /* Div om javascript-trender */
     #jstrend {
         line-height: 2;   
         font-size: 0.8em;
     }
 
+    /* Div om CSS-trender */
     #csstrend {
         line-height: 2;
         font-size: 0.8em;
     }
 
+    /* H3 till trenddivarna */
     .trendh3 {
         text-decoration: underline;
     }
 
-
+    /* Knapparna till varje person */
     .btn-about{
         margin-top: 5%;
         width: 100%;
@@ -168,7 +172,6 @@
     a.motTimmy{
         -webkit-appearance: button;
         -moz-appearance: button;
-        appearance: button;
         margin-left: 35%;
         transition-duration: 0.6s;
         margin-bottom: 1%;
@@ -206,11 +209,13 @@
         width: 10%;
     }
     
+    /* Timmys bild */
     #timmy{
         width: 100%;
         height: 100%;
     }
     
+    /* Div för Olas bild */
     .olasBild{
         margin: 2%;
         float: left;
@@ -218,6 +223,7 @@
         width: 20%;
     }
     
+    /* Olas Bild */
     #ola{
         width: 100%;
         height: 100%;
@@ -262,6 +268,7 @@
         text-decoration: underline;
     }
     
+    /* Rubrikerna i kontaktdiven */
     .contactHead{
         text-align: center;
         font-family: 'Scope One', serif;
@@ -269,17 +276,14 @@
     
     h4{
         font-style: italic;
-    }
-    
-    #h1Contact{
-        padding-top: 2%;
-    }
-    
-    h4{
         padding-bottom: 2%;
     }
     
-    
+    /* Första rubrik i kontaktdiven */
+    #h1Contact{
+        padding-top: 2%;
+    }
+       
     /* Css för kontakta-oss */
     .classContact, .mailen, .msg{
         align-items: center;
@@ -287,10 +291,12 @@
         margin-left: 10%;
     }
 
+    /* Wrapper för textfälten i kontaktdiven */
     .kontaktwrapper {
         width: 100%;
     }
     
+    /* Nedan kommer css för textrutorna */
     .namn, .tlf{
         margin-top: 2%;
         height: 32px;
@@ -317,12 +323,13 @@
         height: 64px;
     }
     
-    /* input i textfälten */
+    /* Slutar här. Input i textfälten */
     input[type='text'] {
         font-family: "Lato", sans-serif;
         background-color: #EDEDED;
     }
     
+    /* Skicka-knappen */
     #contactBtn{
         height: 15%;
         width: 35%;
@@ -352,18 +359,28 @@
         min-height: 100%;
     }
 
-    .first-project, .second-project, .third-project{
+    /* Första och tredje projektet i varje div */
+    .first-project, .third-project{
         margin-left: 10%;
         height: 100%;
         width: 40%;
         float: left;
     }
 
+    /* Andra projektet i div*/
+    .second-project {
+        margin-left: 5%;
+        height: 100%;
+        width: 40%;
+        float: right;
+    }
+
+    /* Alla namn märks med fet stil */
     .span-project{
         font-weight: bold;
     }
 
-
+    /* Nedan kommer css för bilderna */
     .img-facebook, .img-reddit, .img-steelseries{
         height: 70%;
         width: 100%;
@@ -384,6 +401,7 @@
         width: 80%;
     }
 
+    /* Border-radius för bilderna */
     .img-border-radius{
         border-radius: 8px;
         box-shadow: 2px -2px 100px rgba(0, 0, 0, 0.21);
@@ -410,6 +428,7 @@
         justify-content: center;
     }
     
+    /* Start/stopp-knappen i bildspelet */
     #startstopp {
         font-size: 20px;
         border: 2px solid steelblue;
@@ -417,6 +436,7 @@
         transition-duration: 0.6s;
     }
     
+    /* Hover för start/stopp-knapp i bildspel */
     #startstopp:hover {
         opacity: 1;
         background-color: steelblue;
@@ -427,16 +447,19 @@
         display: none;
     }
 
+    /* Contributors profilbilder */
     .avatarbilder {
         height: 20%;
         width: 20%;
     }
 
+    /* Texten för trend/Github-divs */
     .trendText {
         text-decoration: underline;
         font-weight: bold;
     }
 
+    /* Knapparna för att visa contributors */
     #visaMerJS, #visaMerStyle {
         height: 15%;
         max-width: 40vw;
