@@ -285,7 +285,7 @@ $(document).ready(function () {
             $("#div-menu").removeClass("open-menu").addClass("hidden");
             $("#div-lista").removeClass("open-list").addClass("hidden");
         }
-
+        
     });
 });
 
