@@ -1,5 +1,4 @@
-@media only screen and (min-width: 768px){ 
-    
+@media only screen and (min-width: 768px){   
     body, html{
         width: 100%;
         height: 100%;
@@ -56,11 +55,12 @@
         text-decoration: none;
     }
     
+    /* CSS för divloggan */
     div.logodiv{
         margin: 10%;
         width: 30%;
     }
-    
+    /* Sjävla loggan */
     .plogo{
         font-family: 'Lobster', Georgia, Times, serif;
         font-weight: bold;
@@ -106,6 +106,7 @@
         margin-top: -2%;
     }
     
+    /* Välkomsttexten */
     .welcomeTxt{
         position: absolute;
         top: 50%;
@@ -152,22 +153,27 @@
         overflow: hidden;
     }
 
+    /* Första stycket om oss */
     .ooP1{
         margin-left: 14%;
         width: 30%;
         float: left;
         text-align: right;
     }
+
+    /* Första bild till första stycket */
     .ooImg1{
         margin-top: 1%;
         margin-left: 1%;
     }
 
+    /* Tredje diven om oss */
     .about3{
         width: 100%;
         padding-top: 20%;
     }
 
+    /* Tredje stycket om oss */
     .ooP3{
         margin-left: 14%;
         width: 30%;
@@ -175,6 +181,7 @@
         text-align: right;
     }
 
+    /* Bild till tredje stycket */
     .ooImg3{
         float: left;
     }
@@ -203,7 +210,7 @@
         box-shadow: 2px -2px 100px rgba(0, 0, 0, 0.21);
     }
 
-
+    /* Wrappern för trender */
     #trenddiv {
         padding-top: 3%;
         width: 100%;
@@ -212,6 +219,7 @@
         display: inline-block;
     }
     
+    /* Div om javascript-trender */
     #jstrend {
         width: 35%;
         margin-left: 10%;
@@ -223,6 +231,7 @@
         box-shadow: 2px -2px 100px rgba(0,0,0,.21);
     }
     
+    /* Div om CSS-trender */
     #csstrend {
         width: 35%;
         margin-left: 5%;
@@ -233,6 +242,7 @@
         box-shadow: 2px -2px 100px rgba(0,0,0,.21);
     }
     
+    /* H3 till trenddivarna */
     .trendh3 {
         text-decoration: underline;
         margin-left: 1%;
@@ -253,6 +263,7 @@
         cursor: pointer;
     }
 
+    /* Knapparna till varje person */
     .btn-about{
         width: 100%;
         height: 10%;
@@ -293,22 +304,27 @@
         width: 10%;
     }
     
+    /* Div för Olas bild */
     .olasBild{
         padding: 2%;
         float: left;
         height: 20%;
         width: 20%;
     }
+
+    /* Timmys bild */
     #timmy{
         width: 100%;
         height: 100%;
     }
     
+    /* Olas Bild */
     #ola{
         width: 100%;
         height: 100%;
     }
     
+    /* Personwrappers */
     .personSlide1, personSlide2{
         align-items: center;
     }
@@ -321,6 +337,7 @@
         font-family: 'Scope One', serif;
         font-size: 1.2em;
     }
+
     .personTextTimmy{
         margin-left: 10%;
     }
@@ -383,6 +400,8 @@
         background-position: bottom;
         min-height: 70%;
     }
+
+    /* Rubrikerna i kontaktdiven */
     .contactHead{
         text-align: center;
         font-family: 'Scope One', serif;
@@ -393,6 +412,7 @@
         padding-bottom: 1%;
     }
     
+    /* Första rubrik i kontaktdiven */
     #h1Contact{
         padding-top: 2%;
     }
@@ -404,6 +424,7 @@
     
     }
     
+    /* Nedan kommer css för textrutorna */
     .namn, .tlf{
         margin-top: 1%;
         height: 32px;
@@ -434,13 +455,13 @@
         border: 2px solid steelblue;
     }
     
-    /* input i textfälten */
+    /* Slutar här. Input i textfälten */
     input[type='text'] {
         font-family: "Lato", sans-serif;
         border: 2px solid steelblue;
     }
     
-    
+    /* Skicka-knappen */
     #contactBtn{
         height: 5%;
         width: 7%;
@@ -483,6 +504,7 @@
         margin-top: 3%;
     }
 
+    /* Första, andra och tredje projektet i varje div */
     .first-project, .second-project, .third-project{
         margin-left: 10%;
         height: 100%;
@@ -490,11 +512,12 @@
         float: left;
     }
     
+    /* Alla namn märks med fet stil */
     .span-project{
         font-weight: bold;
     }
 
-
+    /* Nedan kommer css för bilderna */
     .img-facebook, .img-reddit, .img-steelseries{
         height: 70%;
         width: 100%;
@@ -521,7 +544,6 @@
     }
     
     /*Själva storleken på bilderna*/
-
     .slideshow-div{
         margin: auto;
         width: 30%;
@@ -566,6 +588,7 @@
         left: 0;
     }
     
+    /* Start/stopp-knappen i bildspelet */
     #startstopp {
         margin-left: 10%;
         font-size: 20px;
@@ -580,10 +603,12 @@
     .info-hidden, #motAnchorOla, #JScontributors, #CSScontributors{
         display: none;
     }
+
     .info-visible {
         display: block;
     }
 
+    /* Contributors profilbilder */
     .avatarbilder {
         height: 10%;
         width: 10%;
@@ -591,12 +616,14 @@
         border-radius: 50%;
     }
 
+    /* Texten för trend/Github-divs */
     .trendText {
         text-decoration: underline;
         font-weight: bold;
         margin-left: 1%;
     }
 
+    /* Knapparna för att visa contributors */
     #visaMerJS, #visaMerStyle {
         height: 5%;
         width: 125px;
@@ -606,7 +633,7 @@
         border-radius: 8px;
     }
     
-
+    /* Div för JavaScript-contributors */
     #JScontributors {
         float: left;
         width: 35%;
@@ -618,6 +645,7 @@
         box-shadow: 2px -2px 100px rgba(0,0,0,.21);
     }
 
+    /* Div för CSS-contributors */
     #CSScontributors {
         float: right;
         width: 35%;

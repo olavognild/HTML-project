@@ -8,6 +8,7 @@ $(document).scroll(function () {
     }
 });
 
+// Byta mellan Timmy och Ola
 function bytSlide(clickedId) {
     var slide1 = document.getElementById("personSlide1");
     var slide2 = document.getElementById("personSlide2");
@@ -57,10 +58,12 @@ $(document).ready(function () {
         $('body').animate({ scrollTop: $path }, 1000);
     })
 
+    // Tar ut förra veckans datum
     var datum = new Date();
     datum.setDate(datum.getDate() - 7);
     var tidigareDatum = datum.toISOString().slice(0, 10);
 
+    // Hämtar trendande JavaScript
     fetch('https://api.github.com/search/repositories?q=language:javascript+created:>' + tidigareDatum + '&sort=stars&order=desc')
         .then(response => response.json())
         .then(data => {
@@ -72,7 +75,9 @@ $(document).ready(function () {
                 var anvnamn = item.owner.login;
                 var stjarnor = item.stargazers_count;
                 var collnamn = item.contributors_url;
+                // Lägger in datan i en div
                 $('#jstrend').append(" - Namn: " + "<a target=" + "'_blank'" + "href='" + linknamn + "'>" + "<strong>" + projektnamn + "</strong>" + "</a>" + " | Ägare: " + "<a target=" + "'_blank'" + "href='" + linkägare + "'>" + "<strong>" + anvnamn + "</strong>" + "</a>" + " | Stjärnor: " + stjarnor + "<br>");
+                // Hämtar ut contributors
                 fetch(collnamn)
                     .then(response => response.json())
                     .then(data => {
@@ -80,13 +85,14 @@ $(document).ready(function () {
                             var objekt = data[z];
                             var contribnamn = objekt.login;
                             var contribavatar = objekt.avatar_url;
+                            // Lägger in datan i en div
                             $('#JScontributors').append("Contributor: " + contribnamn + "<br> <img src='" + contribavatar + "' alt='avatarbild' class='avatarbilder'><br>");
                         }
                     })
             }
         });
 
-
+    // Hämtar trendande CSS, fungerar som ovan
     fetch('https://api.github.com/search/repositories?q=language:css+created:>' + tidigareDatum + '&sort=stars&order=desc')
         .then(response => response.json())
         .then(data => {
@@ -113,6 +119,7 @@ $(document).ready(function () {
         })
     });
 
+// Antingen visar eller gömmer diven för Javascript-contributors    
 document.getElementById("visaMerJS").addEventListener("click", visaMerJavascript);
 function visaMerJavascript() {
     var contribJS = document.getElementById("visaMerJS");
@@ -124,6 +131,7 @@ function visaMerJavascript() {
     }
 }
 
+// Som ovan fast för CSS
 document.getElementById("visaMerStyle").addEventListener("click", visaMerCSS);
 function visaMerCSS() {
     var divCSS = document.getElementById("CSScontributors");
@@ -191,8 +199,9 @@ function bytTextBildspel() {
         startstoppen.value = "Stoppa";
     }
 }
-document.getElementById("visaMerJS").addEventListener("click", bytTextJS);
 
+// Byter text på button beroende på om diven är gömd eller inte
+document.getElementById("visaMerJS").addEventListener("click", bytTextJS);
 function bytTextJS() {
     var JScontrib = document.getElementById("visaMerJS");
     if (JScontrib.value == "Visa Contributors!") {
@@ -202,6 +211,7 @@ function bytTextJS() {
     }
 }
 
+// Som ovan fast för CSS
 document.getElementById("visaMerStyle").addEventListener("click", bytTextCSS)
 function bytTextCSS() {
     var CSScontrib = document.getElementById("visaMerStyle");
@@ -233,7 +243,7 @@ var vTlf = document.getElementById("tlf");
 var vMail = document.getElementById("mail");
 var vMsg = document.getElementById("contactMsg");
 
-
+// Validerar input i kontaktdiven
 function validera(element, regex) {
 
     var value = element.value;
@@ -245,6 +255,7 @@ function validera(element, regex) {
     }
 }
 
+// Regex validering
 vnamn.addEventListener("keyup", function () {
 
     validera(vnamn, /^[a-zA-ZåäöÅÄÖ -]{1,50}$/);
@@ -273,7 +284,9 @@ $(document).ready(function () {
     });
 });
 
+
 $(document).ready(function () {
+    //Funktion för burgardiven
     $("#burgar-div").on("click", function () {
 
         var currentClass = $("#burgar-div").attr("class");
@@ -289,6 +302,7 @@ $(document).ready(function () {
     });
 });
 
+//Beroende på valideringen ska det antingen skickas eller visa att det inte fungerar. Sparar även data.
 document.getElementById("contactBtn").addEventListener("click", sparaData)
 function sparaData() {
     var namnet = document.getElementById("namn");
