@@ -38,41 +38,41 @@ $(document).ready(function () {
     $("#linkHome").click(function () {
         $path = $("#home").offset().top;
         event.preventDefault();
-        $('body').animate({ scrollTop: $path }, 750);
+        $('html, body').animate({ scrollTop: $path }, 750);
     })
     //Animation för scroll till anchorPoint1
     $("#link1").click(function () {
         $path = $("#anchor1").offset().top;
         event.preventDefault();
-        $('body').animate({ scrollTop: $path }, 1000);
+        $('html, body').animate({ scrollTop: $path }, 1000);
     })
 
     //Animation för scroll till anchorPoint2
     $("#link2, .motTimmy, .motOla").click(function () {
         $path = $("#anchor2").offset().top;
         event.preventDefault();
-        $('body').animate({ scrollTop: $path }, 1000);
+        $('html, body').animate({ scrollTop: $path }, 1000);
     })
 
     //Animation för scroll till Olas sida i telefonen
     $("#motAnchorOla").click(function () {
         $path = $("#anchorOla").offset().top;
         event.preventDefault();
-        $('body').animate({ scrollTop: $path }, 1000);
+        $('html, body').animate({ scrollTop: $path }, 1000);
     })
 
     //Animation för scroll till anchorPoint3
     $("#link3").click(function () {
         $path = $("#anchor3").offset().top;
         event.preventDefault();
-        $('body').animate({ scrollTop: $path }, 1000);
+        $('html, body').animate({ scrollTop: $path }, 1000);
     })
 
     //Animation för scroll till anchorPoint4
     $("#link4").click(function () {
         $path = $("#anchor4").offset().top;
         event.preventDefault();
-        $('body').animate({ scrollTop: $path }, 1000);
+        $('html, body').animate({ scrollTop: $path }, 1000);
     })
 
     // Tar ut förra veckans datum
